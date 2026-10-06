@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "titleEn": "Biscuit Deformation CV Pipeline",
+    "titleAr": "اكتشاف تشوه البسكويت",
+    "shortDescEn": "A pure Computer Vision project detecting anomalies in biscuits on a manufacturing line.",
+    "shortDescAr": "مشروع رؤية حاسوبية نقية لاكتشاف العيوب والتشوهات في البسكويت.",
+    "detailedDescEn": "An industrial-grade QA system designed to operate on high-speed conveyor belts. Rather than relying on heavy deep learning models, this system utilizes pure computer vision algorithms (edge detection, contour mapping, morphological transformations, SIFT/ORB) to quickly and efficiently identify shape irregularities, cracks, and missing pieces in real-time.",
+    "detailedDescAr": "نظام ضمان جودة صناعي مصمم للعمل على أحزمة النقل السريعة. يستخدم خوارزميات الرؤية الحاسوبية النقية لتحديد عدم انتظام الشكل والشقوق بكفاءة في الوقت الفعلي.",
+    "tags": ["Computer Vision", "Python"],
+    "mainImg": "https://placehold.co/1200x600/09090b/14b8a6?text=Biscuit+QA+Vision+Pipeline",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/06b6d4?text=Edge+Detection",
+      "https://placehold.co/600x400/18181b/10b981?text=Morphological+Analysis",
+      "https://placehold.co/600x400/18181b/14b8a6?text=Live+Conveyor+Feed"
+    ]
+  },
+  {
+    "id": 2,
+    "titleEn": "Football Tactical Analysis",
+    "titleAr": "تحليل تكتيكي لكرة القدم",
+    "shortDescEn": "Video analysis tool mapping YOLO detections via Homography to a 2D pitch.",
+    "shortDescAr": "أداة تحليل فيديو لتعيين اكتشافات اللاعبين على ملعب ثنائي الأبعاد.",
+    "detailedDescEn": "This advanced AI pipeline ingests broadcast football footage. It employs YOLO for highly accurate player, referee, and ball detection. Crucially, it calculates Homography matrices to transform the camera's perspective into a top-down 2D tactical minimap, allowing for deep statistical analysis of team formations and player velocity.",
+    "detailedDescAr": "يستوعب خط أنابيب الذكاء الاصطناعي هذا لقطات بث كرة القدم. يستخدم YOLO لاكتشاف اللاعبين، ويحسب مصفوفات Homography لتحويل منظور الكاميرا إلى خريطة تكتيكية من أعلى لأسفل.",
+    "tags": ["Computer Vision", "YOLO", "Python"],
+    "mainImg": "https://placehold.co/1200x600/09090b/10b981?text=Football+Homography+Analysis",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/06b6d4?text=YOLOv8+Detection",
+      "https://placehold.co/600x400/18181b/14b8a6?text=Perspective+Transform",
+      "https://placehold.co/600x400/18181b/10b981?text=2D+Pitch+Mapping"
+    ]
+  },
+  {
+    "id": 3,
+    "titleEn": "Qarsha (قررشا) E-Commerce Platform",
+    "titleAr": "منصة قررشا للتجارة الإلكترونية",
+    "shortDescEn": "A full-scale e-commerce web app and dashboard. Slogans: 'قررشا صح', 'كل قرش بيفرق'.",
+    "shortDescAr": "تطبيق ويب متكامل للتجارة الإلكترونية مع لوحة تحكم. (قررشا صح - كل قرش بيفرق).",
+    "detailedDescEn": "Developed a massive ecosystem for the 'Qarsha' brand, embodying their core slogans 'قررشا صح' and 'كل قرش بيفرق'. The frontend provides a seamless, high-conversion shopping experience using React, while the backend API integrates with a robust administrative dashboard. The dashboard tracks inventory, visualizes sales analytics, and manages users.",
+    "detailedDescAr": "تطوير نظام شامل لعلامة قررشا التجارية، متضمنًا شعاراتهم 'قررشا صح' و 'كل قرش بيفرق'. توفر الواجهة الأمامية تجربة تسوق سلسة، بينما تتم إدارة الواجهة الخلفية عبر لوحة تحكم متقدمة.",
+    "tags": ["React", "Web", "Laravel"],
+    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=Qarsha+Storefront",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/14b8a6?text=Shopping+Cart+Flow",
+      "https://placehold.co/600x400/18181b/10b981?text=Admin+Analytics",
+      "https://placehold.co/600x400/18181b/06b6d4?text=Product+Management"
+    ]
+  },
+  {
+    "id": 4,
+    "titleEn": "Knowledge Base RAG System",
+    "titleAr": "نظام RAG الأكاديمي",
+    "shortDescEn": "A semantic search and lecture summarization platform using NLP and LLMs.",
+    "shortDescAr": "منصة بحث دلالي وتلخيص المحاضرات باستخدام معالجة اللغات الطبيعية.",
+    "detailedDescEn": "Built to combat information overload during study sessions. This Retrieval-Augmented Generation (RAG) system ingests PDFs, transcripts, and slides into a Vector Database. Students can ask natural language questions, and the NLP engine retrieves the exact semantic context from the lectures to generate accurate, source-cited answers using an LLM.",
+    "detailedDescAr": "بنيت لمكافحة الحمل الزائد للمعلومات. يستوعب نظام RAG المستندات في قاعدة بيانات متجهية، مما يتيح للطلاب طرح أسئلة بلغة طبيعية للحصول على إجابات دقيقة وموثقة.",
+    "tags": ["LLM", "NLP", "Python"],
+    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=RAG+Study+Engine",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/14b8a6?text=Vector+Embeddings",
+      "https://placehold.co/600x400/18181b/10b981?text=Semantic+Search+UI",
+      "https://placehold.co/600x400/18181b/06b6d4?text=Document+Parsing"
+    ]
+  },
+  {
+    "id": 5,
+    "titleEn": "Fuzzy Logic Dynamic Game",
+    "titleAr": "لعبة بتهيئة المنطق الضبابي",
+    "shortDescEn": "A Python game that uses fuzzy logic to scale difficulty based on player skill.",
+    "shortDescAr": "لعبة بايثون تستخدم المنطق الضبابي لتوسيع الصعوبة بناءً على أداء اللاعب.",
+    "detailedDescEn": "An interactive demonstration of non-binary AI logic. The game constantly monitors metrics like player accuracy, reaction time, and current score. A fuzzy inference system evaluates these fuzzy inputs (e.g., 'somewhat accurate', 'very fast') to dynamically output a difficulty modifier, ensuring the player remains in a state of flow.",
+    "detailedDescAr": "تطبيق تفاعلي للمنطق غير الثنائي. تراقب اللعبة مقاييس مثل الدقة ووقت رد الفعل، وتستخدم نظام استدلال ضبابي لإنتاج معدل صعوبة ديناميكيًا، مما يضمن بقاء اللاعب مستمتعًا.",
+    "tags": ["Game", "Python"],
+    "mainImg": "https://placehold.co/1200x600/09090b/14b8a6?text=Fuzzy+Logic+Engine",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/06b6d4?text=Gameplay+Loop",
+      "https://placehold.co/600x400/18181b/10b981?text=Fuzzy+Rule+Sets",
+      "https://placehold.co/600x400/18181b/14b8a6?text=Dynamic+Spawning"
+    ]
+  },
+  {
+    "id": 6,
+    "titleEn": "Freelancer Job Portal",
+    "titleAr": "بوابة وظائف للمستقلين",
+    "shortDescEn": "A LinkedIn-like SPA tailored for publishing specialized work and matching freelancers.",
+    "shortDescAr": "تطبيق ويب يشبه لينكد إن مصمم لنشر الأعمال ومطابقة المستقلين.",
+    "detailedDescEn": "A comprehensive social platform connecting highly specialized freelancers with unique opportunities. Includes features like portfolio publishing, proposal submissions, real-time notifications, and a matching algorithm based on skill tags. Built ground-up in React to feel like a native application.",
+    "detailedDescAr": "منصة اجتماعية شاملة تربط المستقلين المتخصصين بفرص فريدة. تتضمن ميزات مثل نشر المحافظ وتقديم المقترحات وخوارزمية مطابقة بناءً على المهارات.",
+    "tags": ["React", "Web", "Laravel"],
+    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=Freelancer+Network",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/14b8a6?text=News+Feed",
+      "https://placehold.co/600x400/18181b/10b981?text=Proposal+System",
+      "https://placehold.co/600x400/18181b/06b6d4?text=User+Profile"
+    ]
+  },
+  {
+    "id": 7,
+    "titleEn": "Automated Zuma AI Bot",
+    "titleAr": "بوت زوما الآلي",
+    "shortDescEn": "An automated playing agent capable of playing Zuma using visual analysis.",
+    "shortDescAr": "وكيل لعب آلي قادر على لعب زوما باستخدام التحليل البصري.",
+    "detailedDescEn": "A purely visual bot that hooks into the screen buffer. It parses the chain of colored balls, determines the color of the loaded ball in the frog, calculates spatial trajectory angles to intersect identical colors, and simulates mouse clicks. Achieved high-score automation purely through CV and geometric math.",
+    "detailedDescAr": "بوت بصري يقرأ الشاشة ليحلل سلسلة الكرات الملونة، ويحسب زوايا المسار المكاني لضرب الألوان المتطابقة، ويحاكي نقرات الماوس. أتمتة بحتة من خلال الرؤية الحاسوبية والرياضيات.",
+    "tags": ["Computer Vision", "Python"],
+    "mainImg": "https://placehold.co/1200x600/09090b/10b981?text=Zuma+Vision+Bot",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/06b6d4?text=Color+Segmentation",
+      "https://placehold.co/600x400/18181b/14b8a6?text=Trajectory+Math",
+      "https://placehold.co/600x400/18181b/10b981?text=Automated+Execution"
+    ]
+  },
+  {
+    "id": 8,
+    "titleEn": "Gym Management Dashboard",
+    "titleAr": "لوحة إدارة الصالة الرياضية",
+    "shortDescEn": "A modernized administrative dashboard replacing an outdated gym system.",
+    "shortDescAr": "لوحة إدارية حديثة تحل محل نظام الصالة الرياضية القديم.",
+    "detailedDescEn": "Transformed an old, clunky desktop application into a lightning-fast React SPA. The dashboard manages hundreds of active memberships, tracks subscription expiry, handles trainer schedules, and generates financial visualizations.",
+    "detailedDescAr": "تحويل تطبيق سطح مكتب قديم إلى تطبيق React سريع للغاية. تدير اللوحة مئات العضويات النشطة وتتتبع انتهاء الاشتراك وتتعامل مع جداول المدربين.",
+    "tags": ["React", "Web"],
+    "mainImg": "https://placehold.co/1200x600/09090b/14b8a6?text=Gym+Admin+UI",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/06b6d4?text=Member+Database",
+      "https://placehold.co/600x400/18181b/10b981?text=Financial+Charts",
+      "https://placehold.co/600x400/18181b/14b8a6?text=Trainer+Schedules"
+    ]
+  },
+  {
+    "id": 9,
+    "titleEn": "Mafia Mobile Sandbox",
+    "titleAr": "لعبة مافيا للجوال",
+    "shortDescEn": "A Flutter mobile game with complex narrative decision trees and a hidden sandbox mode.",
+    "shortDescAr": "لعبة جوال Flutter بأشجار قرار سردية معقدة ووضع رمل سري.",
+    "detailedDescEn": "A mobile development venture using Flutter. The game features highly stylized UI, complex state management for the player's inventory and allegiances, and intricate narrative decision trees. Includes a hidden sandbox mode triggered by specific gameplay sequences for ultimate freedom.",
+    "detailedDescAr": "مشروع تطوير جوال باستخدام Flutter. تتميز اللعبة بواجهة مستخدم أنيقة وإدارة حالة معقدة لمخزون اللاعب، وأشجار قرار سردية معقدة. تتضمن وضع لعب مفتوح مخفي.",
+    "tags": ["Flutter", "Mobile", "Game"],
+    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=Mafia+Mobile+App",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/14b8a6?text=Narrative+Choices",
+      "https://placehold.co/600x400/18181b/10b981?text=Inventory+State",
+      "https://placehold.co/600x400/18181b/06b6d4?text=Hidden+Sandbox"
+    ]
+  },
+  {
+    "id": 10,
+    "titleEn": "Interactive Touchscreen Wheel",
+    "titleAr": "عجلة تفاعلية تعمل باللمس",
+    "shortDescEn": "An interactive decision wheel built with HTML/JS Canvas logic.",
+    "shortDescAr": "عجلة قرار تفاعلية مبنية باستخدام منطق HTML/JS Canvas.",
+    "detailedDescEn": "A custom interactive decision wheel built completely from scratch using HTML5 Canvas and JavaScript physics calculations. It features realistic spinning momentum, touch and mouse swipe support, and dynamic slice rendering.",
+    "detailedDescAr": "عجلة قرار تفاعلية مبنية بالكامل من الصفر باستخدام HTML5 Canvas وحسابات فيزياء جافا سكريبت. تتميز بزخم دوران واقعي، ودعم التمرير، وعرض ديناميكي.",
+    "tags": ["Web", "Design"],
+    "mainImg": "https://placehold.co/1200x600/09090b/10b981?text=Interactive+Canvas+Wheel",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/06b6d4?text=Physics+Calculations",
+      "https://placehold.co/600x400/18181b/14b8a6?text=Canvas+Rendering",
+      "https://placehold.co/600x400/18181b/10b981?text=Touch+Events"
+    ]
+  },
+  {
+    "id": 11,
+    "titleEn": "4 Marketing SPAs",
+    "titleAr": "أربعة تطبيقات تسويقية",
+    "shortDescEn": "Four optimized marketing Single Page Applications for different companies.",
+    "shortDescAr": "أربعة تطبيقات ويب ذات صفحة واحدة محسنة للتسويق لشركات مختلفة.",
+    "detailedDescEn": "Developed four distinct, highly responsive, SEO-optimized landing pages for corporate clients. Focused heavily on high-performance animations, fluid typography, and immediate call-to-action conversions.",
+    "detailedDescAr": "تطوير أربع صفحات هبوط محسنة وتفاعلية لعملاء مختلفين، مع التركيز على الرسوم المتحركة عالية الأداء والطباعة السلسة.",
+    "tags": ["React", "Web", "Design"],
+    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=Marketing+SPAs",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/14b8a6?text=Landing+Page+1",
+      "https://placehold.co/600x400/18181b/10b981?text=Landing+Page+2",
+      "https://placehold.co/600x400/18181b/06b6d4?text=Conversion+Funnels"
+    ]
+  },
+  {
+    "id": 12,
+    "titleEn": "Damascus Coin Mascot Logo",
+    "titleAr": "شعار تعويذة العملة الدمشقية",
+    "shortDescEn": "A Figma brand mascot design holding a 1930s Damascus Syrian coin.",
+    "shortDescAr": "تصميم شخصية تعويذة العلامة التجارية باستخدام Figma تحمل عملة دمشقية سورية من الثلاثينيات.",
+    "detailedDescEn": "A complete UI/UX and brand identity project in Figma. The centerpiece is a meticulously designed mascot holding a historically accurate representation of a 1930s Damascus Syrian coin, blending modern vector art with historical homage.",
+    "detailedDescAr": "مشروع هوية بصرية وتصميم واجهة مستخدم كامل في Figma. القطعة المركزية هي تعويذة مصممة بدقة تحمل تمثيلًا لعملة دمشقية سورية من الثلاثينيات.",
+    "tags": ["Figma", "Design"],
+    "mainImg": "https://placehold.co/1200x600/09090b/14b8a6?text=Mascot+Coin+Design",
+    "gallery": [
+      "https://placehold.co/600x400/18181b/06b6d4?text=Vector+Drafts",
+      "https://placehold.co/600x400/18181b/10b981?text=Color+Palette",
+      "https://placehold.co/600x400/18181b/14b8a6?text=Final+Export"
+    ]
+  }
+]
