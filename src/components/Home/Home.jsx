@@ -1,25 +1,23 @@
-import React from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import Hero from './Hero';
 import About from './About';
 import Skills from './Skills';
+import FeaturedProjects from './FeaturedProjects';
 import Categories from './Categories';
 import Contact from './Contact';
 
-export default function Home({ t, lang, isRTL, openProjects }) {
-    const heroRef = useScrollReveal();
-    const aboutRef = useScrollReveal();
-    const skillsRef = useScrollReveal();
-    const catRef = useScrollReveal();
-    const contactRef = useScrollReveal();
+export default function Home({ t, lang, isRTL, openProjects, scrollToSection }) {
+    // One observer reveals every [data-reveal] element on the page.
+    const revealRef = useScrollReveal([lang]);
 
     return (
-        <div id="home-top" className="space-y-40 pb-20">
-            <Hero t={t} isRTL={isRTL} openProjects={openProjects} heroRef={heroRef} />
-            <About t={t} aboutRef={aboutRef} />
-            <Skills t={t} lang={lang} skillsRef={skillsRef} />
-            <Categories t={t} openProjects={openProjects} catRef={catRef} />
-            <Contact t={t} contactRef={contactRef} />
+        <div id="home-top" ref={revealRef} className="space-y-32 md:space-y-40 pb-20">
+            <Hero t={t} lang={lang} isRTL={isRTL} openProjects={openProjects} scrollToSection={scrollToSection} />
+            <About t={t} />
+            <FeaturedProjects t={t} lang={lang} isRTL={isRTL} openProjects={openProjects} />
+            <Skills t={t} lang={lang} openProjects={openProjects} />
+            <Categories t={t} isRTL={isRTL} openProjects={openProjects} />
+            <Contact t={t} lang={lang} />
         </div>
     );
 }

@@ -1,20 +1,47 @@
-import React from 'react';
-import { Briefcase } from 'lucide-react';
+import { GraduationCap, Code, PenTool, Sparkles } from 'lucide-react';
+import SpotlightCard from '../ui/SpotlightCard';
 
-export default function About({ t, aboutRef }) {
+const CARD_ICONS = [GraduationCap, Code, PenTool];
+
+export default function About({ t }) {
     return (
-        <section id="about" ref={aboutRef} className="scroll-mt-32 opacity-0 translate-y-12 transition-all duration-1000 ease-out">
-            <div className="bg-zinc-900 border border-zinc-800 rounded-[2.5rem] p-10 md:p-16 shadow-2xl relative overflow-hidden group hover:border-teal-500/30 transition-colors duration-500">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-teal-900/20 to-cyan-900/10 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
-                <div className="flex flex-col md:flex-row gap-10 items-start relative z-10">
-                    <div className="p-6 bg-gradient-to-br from-zinc-950 to-zinc-900 rounded-3xl border border-zinc-800 text-teal-500 shrink-0 shadow-inner">
-                        <Briefcase size={48} className="text-cyan-400" />
-                    </div>
+        <section id="about" className="scroll-mt-32">
+            <div data-reveal className="relative bg-zinc-900/70 border border-zinc-800 rounded-[2.5rem] p-8 md:p-14 overflow-hidden">
+                <div className="aurora-blob w-[420px] h-[420px] bg-teal-600 -top-40 -end-32" />
+                <div className="aurora-blob w-[320px] h-[320px] bg-cyan-700 -bottom-40 -start-20" style={{ animationDelay: '-6s' }} />
+
+                <div className="relative z-10 grid lg:grid-cols-[1.4fr_1fr] gap-12 items-start">
                     <div>
-                        <h2 className="text-4xl font-bold mb-6 text-white">{t.about.title}</h2>
-                        <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-4xl">
-                            {t.about.content}
-                        </p>
+                        <div className="flex items-center gap-3 text-teal-400 font-bold uppercase tracking-widest text-sm mb-5">
+                            <Sparkles size={18} /> {t.about.title}
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-white mb-8 leading-tight">
+                            {t.about.lead}
+                        </h2>
+                        <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-6">{t.about.content}</p>
+                        <p className="text-gray-400 text-lg leading-relaxed">{t.about.content2}</p>
+                    </div>
+
+                    <div className="grid gap-5">
+                        {t.about.cards.map((card, i) => {
+                            const Icon = CARD_ICONS[i];
+                            return (
+                                <SpotlightCard
+                                    key={card.title}
+                                    data-reveal="right"
+                                    style={{ '--delay': `${150 + i * 120}ms` }}
+                                    className="flex gap-5 items-start bg-zinc-950/70 border border-zinc-800 rounded-3xl p-6"
+                                >
+                                    <div className="p-3 rounded-2xl bg-gradient-to-br from-teal-500/20 to-cyan-500/10 border border-teal-500/20 text-cyan-300 shrink-0">
+                                        <Icon size={24} />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-bold text-white mb-1">{card.title}</h3>
+                                        <p className="text-gray-400 leading-relaxed">{card.text}</p>
+                                    </div>
+                                </SpotlightCard>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

@@ -1,194 +1,1318 @@
 [
   {
-    "id": 1,
-    "titleEn": "Biscuit Deformation CV Pipeline",
-    "titleAr": "اكتشاف تشوه البسكويت",
-    "shortDescEn": "A pure Computer Vision project detecting anomalies in biscuits on a manufacturing line.",
-    "shortDescAr": "مشروع رؤية حاسوبية نقية لاكتشاف العيوب والتشوهات في البسكويت.",
-    "detailedDescEn": "An industrial-grade QA system designed to operate on high-speed conveyor belts. Rather than relying on heavy deep learning models, this system utilizes pure computer vision algorithms (edge detection, contour mapping, morphological transformations, SIFT/ORB) to quickly and efficiently identify shape irregularities, cracks, and missing pieces in real-time.",
-    "detailedDescAr": "نظام ضمان جودة صناعي مصمم للعمل على أحزمة النقل السريعة. يستخدم خوارزميات الرؤية الحاسوبية النقية لتحديد عدم انتظام الشكل والشقوق بكفاءة في الوقت الفعلي.",
-    "tags": ["Computer Vision", "Python"],
-    "mainImg": "https://placehold.co/1200x600/09090b/14b8a6?text=Biscuit+QA+Vision+Pipeline",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/06b6d4?text=Edge+Detection",
-      "https://placehold.co/600x400/18181b/10b981?text=Morphological+Analysis",
-      "https://placehold.co/600x400/18181b/14b8a6?text=Live+Conveyor+Feed"
-    ]
+    "id": "matchlens",
+    "featured": true,
+    "type": "graduation",
+    "year": "2026",
+    "titleEn": "MatchLens: AI Football Match Analysis",
+    "titleAr": "MatchLens: تحليل مباريات كرة القدم بالذكاء الاصطناعي",
+    "shortDescEn": "Graduation project. A desktop app that turns any football broadcast into live tactical data: tracked players, a 2D radar, passes, shots and xG.",
+    "shortDescAr": "مشروع التخرج. تطبيق مكتبي يحوّل أي بث لمباراة كرة قدم إلى بيانات تكتيكية حية: تتبع اللاعبين، رادار ثنائي الأبعاد، التمريرات، التسديدات وxG.",
+    "detailedDescEn": "MatchLens watches a football match (a video file, a stream or a live feed) and rebuilds what happens on the pitch in real time. A fine-tuned YOLO26 model detects players, goalkeepers, referees and the ball. Each of them keeps a stable identity through occlusions and camera pans, and is assigned to a team from their kit colours. A second keypoint model and a RANSAC homography project everyone from camera pixels onto a real 105 × 68 m pitch.\n\nFrom those positions, event detectors recognise passes, crosses, carries, interceptions, shots, goals with assists, goalkeeper actions and set pieces, and every event is scored with xG, xA and xT models. The results stream over WebSockets to a React + Electron dashboard with an annotated video, a tactical radar, live statistics, heat maps and a match archive.",
+    "detailedDescAr": "يراقب MatchLens مباراة كرة القدم (ملف فيديو أو بث مباشر) ويعيد بناء ما يحدث على أرض الملعب في الوقت الحقيقي. يكتشف نموذج YOLO26 مدرَّب خصيصاً اللاعبين وحراس المرمى والحكام والكرة، ويحافظ على هوية ثابتة لكل منهم رغم التداخل وحركة الكاميرا، ويحدد فريق كل لاعب من ألوان قميصه. ثم يُسقط نموذج ثانٍ للنقاط المرجعية مع Homography وRANSAC مواقع الجميع من بكسلات الكاميرا إلى ملعب حقيقي بأبعاد 105 × 68 متراً.\n\nانطلاقاً من هذه المواقع، تتعرف كواشف الأحداث على التمريرات والعرضيات والمراوغات والاعتراضات والتسديدات والأهداف مع صانعيها وتدخلات الحارس والكرات الثابتة، وتُقيَّم كل لقطة بنماذج xG وxA وxT. تُبث النتائج عبر WebSockets إلى لوحة تحكم React + Electron تعرض الفيديو المشروح ورادار تكتيكي وإحصاءات حية وخرائط حرارية وأرشيفاً للمباريات.",
+    "highlightsEn": [
+      "Fine-tuned YOLO26 detector, exported to TensorRT for real-time inference",
+      "ByteTrack-style tracking with camera-motion compensation and a Kalman-based ball tracker",
+      "Pixel-to-metre homography and ball-height recovery from a ballistic fit",
+      "Event detection plus xG / xA / xT value models",
+      "FastAPI and WebSocket engine with a React + Electron desktop UI"
+    ],
+    "highlightsAr": [
+      "نموذج YOLO26 مدرَّب خصيصاً ومُصدَّر إلى TensorRT للاستدلال في الوقت الحقيقي",
+      "تتبع على نمط ByteTrack مع تعويض حركة الكاميرا ومتتبع للكرة قائم على Kalman",
+      "تحويل من البكسل إلى الأمتار عبر Homography واستنتاج ارتفاع الكرة",
+      "كشف أحداث المباراة مع نماذج xG وxA وxT",
+      "محرك FastAPI وWebSockets مع واجهة مكتبية React + Electron"
+    ],
+    "tags": [
+      "AI",
+      "Computer Vision",
+      "Machine Learning",
+      "React"
+    ],
+    "tech": [
+      "Python",
+      "PyTorch",
+      "YOLO26",
+      "TensorRT",
+      "OpenCV",
+      "ByteTrack",
+      "FastAPI",
+      "WebSockets",
+      "React",
+      "Electron"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Built the homography (pixel-to-pitch mapping), worked on part of the tracking, and built the frontend: the dashboard the whole product is used through.",
+    "roleAr": "بناء الـ Homography (تحويل البكسل إلى إحداثيات الملعب)، والمشاركة في جزء من التتبع، وبناء الواجهة الأمامية: لوحة التحكم التي يُستخدم المنتج من خلالها بالكامل."
   },
   {
-    "id": 2,
-    "titleEn": "Football Tactical Analysis",
-    "titleAr": "تحليل تكتيكي لكرة القدم",
-    "shortDescEn": "Video analysis tool mapping YOLO detections via Homography to a 2D pitch.",
-    "shortDescAr": "أداة تحليل فيديو لتعيين اكتشافات اللاعبين على ملعب ثنائي الأبعاد.",
-    "detailedDescEn": "This advanced AI pipeline ingests broadcast football footage. It employs YOLO for highly accurate player, referee, and ball detection. Crucially, it calculates Homography matrices to transform the camera's perspective into a top-down 2D tactical minimap, allowing for deep statistical analysis of team formations and player velocity.",
-    "detailedDescAr": "يستوعب خط أنابيب الذكاء الاصطناعي هذا لقطات بث كرة القدم. يستخدم YOLO لاكتشاف اللاعبين، ويحسب مصفوفات Homography لتحويل منظور الكاميرا إلى خريطة تكتيكية من أعلى لأسفل.",
-    "tags": ["Computer Vision", "YOLO", "Python"],
-    "mainImg": "https://placehold.co/1200x600/09090b/10b981?text=Football+Homography+Analysis",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/06b6d4?text=YOLOv8+Detection",
-      "https://placehold.co/600x400/18181b/14b8a6?text=Perspective+Transform",
-      "https://placehold.co/600x400/18181b/10b981?text=2D+Pitch+Mapping"
-    ]
+    "id": "adlify",
+    "featured": true,
+    "type": "team",
+    "year": "2025–2026",
+    "titleEn": "ADlify: In-Vehicle Advertising Platform",
+    "titleAr": "ADlify: منصة الإعلانات على شاشات المركبات",
+    "shortDescEn": "A fleet advertising platform that schedules video ads onto screens in buses and cars, tracks the vehicles on a live map and reports measured impressions.",
+    "shortDescAr": "منصة إعلانية تجدول إعلانات الفيديو على شاشات مثبتة في الحافلات والسيارات، وتتتبع المركبات على خريطة حية، وتقدّم تقارير دقيقة عن مرات الظهور.",
+    "detailedDescEn": "ADlify turns transport fleets into moving advertising networks. Advertisers run campaigns, and a scheduling engine decides which ad plays on which vehicle and when, using weekly time windows, campaign dates, daily impression caps and minimum gaps between plays. Android screens inside the vehicles play the ads offline-first and report every play, while the dashboard shows the fleet on a live map with heat maps, geographic zones and analytics.\n\nThe platform has six parts: a Laravel API, a React admin and company dashboard, a React + Three.js marketing site, a Flutter company app, and two Flutter kiosk apps that the dashboard can control remotely (brightness, on/off, restart, screenshots).",
+    "detailedDescAr": "تحوّل ADlify أساطيل النقل إلى شبكات إعلانية متحركة. يطلق المعلنون حملاتهم، ويحدد محرك الجدولة أي إعلان يُعرض على أي مركبة ومتى، وفق نوافذ زمنية أسبوعية وتواريخ الحملة وحد أقصى للظهور اليومي وفاصل أدنى بين مرات العرض. تعرض شاشات Android داخل المركبات الإعلانات حتى دون اتصال وتسجّل كل عرض، بينما تُظهر لوحة التحكم الأسطول على خريطة حية مع خرائط حرارية ومناطق جغرافية وتحليلات.\n\nتتكون المنصة من ستة أجزاء: واجهة Laravel البرمجية، ولوحة تحكم React للإدارة والشركات، وموقع تعريفي بـ React وThree.js، وتطبيق Flutter للشركات، وتطبيقا Flutter للشاشات يمكن التحكم بهما عن بُعد (السطوع، التشغيل والإيقاف، إعادة التشغيل، لقطات الشاشة).",
+    "highlightsEn": [
+      "Led the React web front end: admin and company dashboard plus the marketing site",
+      "Drag-and-drop weekly schedule editor and bulk ad-to-car assignment",
+      "Live Leaflet fleet map with heat maps and zone-restricted ads",
+      "Statistics charts, screen controls, logs and bilingual EN/AR UI"
+    ],
+    "highlightsAr": [
+      "قيادة تطوير واجهات الويب بـ React: لوحة الإدارة والشركات والموقع التعريفي",
+      "محرر جداول أسبوعية بالسحب والإفلات وإسناد جماعي للإعلانات على المركبات",
+      "خريطة حية للأسطول باستخدام Leaflet مع خرائط حرارية وإعلانات مقيدة بالمناطق",
+      "رسوم بيانية للإحصاءات، والتحكم بالشاشات، والسجلات، وواجهة ثنائية اللغة"
+    ],
+    "roleEn": "Web front-end lead (dashboard and marketing site), with some Laravel backend work.",
+    "roleAr": "قائد تطوير واجهات الويب (لوحة التحكم والموقع التعريفي) مع مساهمات في Laravel.",
+    "tags": [
+      "React",
+      "Laravel",
+      "Mobile"
+    ],
+    "tech": [
+      "React 19",
+      "Zustand",
+      "Leaflet",
+      "Recharts",
+      "Three.js",
+      "Laravel 12",
+      "Reverb",
+      "Flutter",
+      "i18next"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
   },
   {
-    "id": 3,
-    "titleEn": "Qarsha (قررشا) E-Commerce Platform",
-    "titleAr": "منصة قررشا للتجارة الإلكترونية",
-    "shortDescEn": "A full-scale e-commerce web app and dashboard. Slogans: 'قررشا صح', 'كل قرش بيفرق'.",
-    "shortDescAr": "تطبيق ويب متكامل للتجارة الإلكترونية مع لوحة تحكم. (قررشا صح - كل قرش بيفرق).",
-    "detailedDescEn": "Developed a massive ecosystem for the 'Qarsha' brand, embodying their core slogans 'قررشا صح' and 'كل قرش بيفرق'. The frontend provides a seamless, high-conversion shopping experience using React, while the backend API integrates with a robust administrative dashboard. The dashboard tracks inventory, visualizes sales analytics, and manages users.",
-    "detailedDescAr": "تطوير نظام شامل لعلامة قررشا التجارية، متضمنًا شعاراتهم 'قررشا صح' و 'كل قرش بيفرق'. توفر الواجهة الأمامية تجربة تسوق سلسة، بينما تتم إدارة الواجهة الخلفية عبر لوحة تحكم متقدمة.",
-    "tags": ["React", "Web", "Laravel"],
-    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=Qarsha+Storefront",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/14b8a6?text=Shopping+Cart+Flow",
-      "https://placehold.co/600x400/18181b/10b981?text=Admin+Analytics",
-      "https://placehold.co/600x400/18181b/06b6d4?text=Product+Management"
-    ]
+    "id": "qarsha",
+    "featured": true,
+    "type": "team",
+    "year": "2026",
+    "titleEn": "Qarsha: Daily-Deals Marketplace",
+    "titleAr": "قررشا: سوق العروض اليومية",
+    "shortDescEn": "A curated flash-deals marketplace for Syria (\"قررشا صح\", \"كل قرش بيفرق\") with limited-quantity offers, video reels, gifting, local e-wallet payments and seller settlement.",
+    "shortDescAr": "سوق عروض يومية مختارة في سوريا («قررشا صح»، «كل قرش بيفرق»): عروض بكميات محدودة، مقاطع فيديو قصيرة، إهداء الطلبات، دفع بالمحافظ الإلكترونية المحلية، وتسويات مالية للبائعين.",
+    "detailedDescEn": "Qarsha, built around the slogans \"قررشا صح\" and \"كل قرش بيفرق\", publishes time-limited, limited-quantity offers from partner sellers. Customers claim an offer, which reserves the stock while they check out, and then buy through the web storefront or the Flutter app. Each delivered order credits every seller their share minus a commission that depends on seller size, category and discount.\n\nThe backend is a carefully layered Laravel 12 modular monolith with concurrency-safe checkout, an order state machine, queued jobs for offer schedules, Meilisearch search and eCash / MTN Cash payments. Prices are stored in USD and shown in Syrian pounds.",
+    "detailedDescAr": "تنشر قررشا، المبنية حول شعاري «قررشا صح» و«كل قرش بيفرق»، عروضاً محدودة المدة والكمية من بائعين شركاء. يحجز العميل العرض فتُحجز الكمية له أثناء إتمام الشراء، ثم يشتري عبر متجر الويب أو تطبيق Flutter. وعند تسليم كل طلب يُضاف لكل بائع نصيبه بعد خصم عمولة تُحسب حسب حجم البائع والفئة والخصم.\n\nالواجهة الخلفية مبنية بـ Laravel 12 على شكل وحدات منظمة بطبقات واضحة، مع إتمام شراء آمن من التعارض، وآلة حالات للطلبات، ومهام مجدولة للعروض، وبحث Meilisearch، ودفع عبر eCash وMTN Cash. تُخزَّن الأسعار بالدولار وتُعرض بالليرة السورية.",
+    "highlightsEn": [
+      "Designed and built the React customer storefront",
+      "Deal pages, search, OTP login, addresses with maps, orders, reels and wishlist",
+      "Gifting flow, product comparison, and language, currency and theme settings",
+      "Full Arabic RTL support, connected to the Laravel API"
+    ],
+    "highlightsAr": [
+      "تصميم وتطوير متجر العملاء بـ React",
+      "صفحات العروض والبحث وتسجيل الدخول برمز OTP والعناوين على الخريطة والطلبات والمقاطع وقائمة الأمنيات",
+      "إهداء الطلبات ومقارنة المنتجات وإعدادات اللغة والعملة والمظهر",
+      "دعم كامل للعربية من اليمين لليسار وربط مع واجهة Laravel"
+    ],
+    "roleEn": "Built the React customer storefront end to end, in a 6-person team.",
+    "roleAr": "بناء متجر العملاء بـ React بالكامل، ضمن فريق من 6 أعضاء.",
+    "tags": [
+      "React",
+      "Laravel",
+      "Mobile"
+    ],
+    "tech": [
+      "React 19",
+      "Zustand",
+      "React Router",
+      "Leaflet",
+      "Swiper",
+      "Laravel 12",
+      "Meilisearch",
+      "Flutter"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
   },
   {
-    "id": 4,
-    "titleEn": "Knowledge Base RAG System",
-    "titleAr": "نظام RAG الأكاديمي",
-    "shortDescEn": "A semantic search and lecture summarization platform using NLP and LLMs.",
-    "shortDescAr": "منصة بحث دلالي وتلخيص المحاضرات باستخدام معالجة اللغات الطبيعية.",
-    "detailedDescEn": "Built to combat information overload during study sessions. This Retrieval-Augmented Generation (RAG) system ingests PDFs, transcripts, and slides into a Vector Database. Students can ask natural language questions, and the NLP engine retrieves the exact semantic context from the lectures to generate accurate, source-cited answers using an LLM.",
-    "detailedDescAr": "بنيت لمكافحة الحمل الزائد للمعلومات. يستوعب نظام RAG المستندات في قاعدة بيانات متجهية، مما يتيح للطلاب طرح أسئلة بلغة طبيعية للحصول على إجابات دقيقة وموثقة.",
-    "tags": ["LLM", "NLP", "Python"],
-    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=RAG+Study+Engine",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/14b8a6?text=Vector+Embeddings",
-      "https://placehold.co/600x400/18181b/10b981?text=Semantic+Search+UI",
-      "https://placehold.co/600x400/18181b/06b6d4?text=Document+Parsing"
-    ]
+    "id": "rag-lecturer",
+    "featured": true,
+    "type": "team",
+    "year": "2026",
+    "titleEn": "RAG Lecturer Saver 3000",
+    "titleAr": "مساعد المحاضرات الذكي (RAG)",
+    "shortDescEn": "A bilingual AI study tutor. Upload lecture PDFs and slides, then chat with them and get answers that cite the source page.",
+    "shortDescAr": "مساعد دراسي ذكي ثنائي اللغة: ارفع ملفات المحاضرات والشرائح، ثم اسألها واحصل على إجابات مع الإشارة إلى الصفحة المصدر.",
+    "detailedDescEn": "A Retrieval-Augmented Generation system for students. Lecture PDFs and PowerPoint files are split into parent and child chunks, embedded with a multilingual model and stored in ChromaDB. For each question, the system detects the language and intent, expands the question into several searches, merges the results, re-ranks them with a cross-encoder, and has a Llama 3 model answer only from those sources, with inline citations.\n\nA semantic cache answers repeated or reworded questions instantly, and the Streamlit interface supports Arabic right-to-left text, source cards and suggested follow-up questions.",
+    "detailedDescAr": "نظام توليد معزّز بالاسترجاع (RAG) للطلاب. تُقسَّم ملفات المحاضرات (PDF وPowerPoint) إلى مقاطع رئيسية وفرعية، وتُحوَّل إلى متجهات بنموذج متعدد اللغات وتُخزَّن في ChromaDB. لكل سؤال يحدد النظام اللغة والهدف، ويولّد عدة صيغ للبحث، ويدمج النتائج ويعيد ترتيبها بنموذج Cross-Encoder، ثم يجيب نموذج Llama 3 من هذه المصادر فقط مع ذكر المرجع داخل النص.\n\nتجيب ذاكرة مؤقتة دلالية فوراً عن الأسئلة المكررة أو المعاد صياغتها، وتدعم واجهة Streamlit الكتابة العربية من اليمين لليسار وبطاقات المصادر واقتراح أسئلة متابعة.",
+    "highlightsEn": [
+      "Multilingual embeddings (e5) with ChromaDB",
+      "Multi-query retrieval and cross-encoder re-ranking",
+      "Answers with source citations and follow-up question suggestions",
+      "Semantic cache, and a choice of LLM provider (Groq, Cerebras, OpenRouter)"
+    ],
+    "highlightsAr": [
+      "تضمينات متعددة اللغات (e5) مع ChromaDB",
+      "استرجاع بصيغ متعددة للسؤال مع إعادة ترتيب بنموذج Cross-Encoder",
+      "إجابات موثقة بالمصادر مع اقتراح أسئلة متابعة",
+      "ذاكرة مؤقتة دلالية وإمكانية اختيار مزوّد النموذج (Groq وCerebras وOpenRouter)"
+    ],
+    "tags": [
+      "AI",
+      "LLM & NLP"
+    ],
+    "tech": [
+      "Python",
+      "Streamlit",
+      "ChromaDB",
+      "Sentence-Transformers",
+      "Cross-Encoder",
+      "Llama 3",
+      "pypdf",
+      "python-pptx"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
   },
   {
-    "id": 5,
-    "titleEn": "Fuzzy Logic Dynamic Game",
-    "titleAr": "لعبة بتهيئة المنطق الضبابي",
-    "shortDescEn": "A Python game that uses fuzzy logic to scale difficulty based on player skill.",
-    "shortDescAr": "لعبة بايثون تستخدم المنطق الضبابي لتوسيع الصعوبة بناءً على أداء اللاعب.",
-    "detailedDescEn": "An interactive demonstration of non-binary AI logic. The game constantly monitors metrics like player accuracy, reaction time, and current score. A fuzzy inference system evaluates these fuzzy inputs (e.g., 'somewhat accurate', 'very fast') to dynamically output a difficulty modifier, ensuring the player remains in a state of flow.",
-    "detailedDescAr": "تطبيق تفاعلي للمنطق غير الثنائي. تراقب اللعبة مقاييس مثل الدقة ووقت رد الفعل، وتستخدم نظام استدلال ضبابي لإنتاج معدل صعوبة ديناميكيًا، مما يضمن بقاء اللاعب مستمتعًا.",
-    "tags": ["Game", "Python"],
-    "mainImg": "https://placehold.co/1200x600/09090b/14b8a6?text=Fuzzy+Logic+Engine",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/06b6d4?text=Gameplay+Loop",
-      "https://placehold.co/600x400/18181b/10b981?text=Fuzzy+Rule+Sets",
-      "https://placehold.co/600x400/18181b/14b8a6?text=Dynamic+Spawning"
-    ]
+    "id": "jarvis",
+    "featured": true,
+    "type": "personal",
+    "year": "2026",
+    "titleEn": "Jarvis: Offline Voice Assistant",
+    "titleAr": "Jarvis: مساعد صوتي يعمل دون إنترنت",
+    "shortDescEn": "A privacy-first Android assistant that recognises speech on the device and controls the whole phone (taps, swipes, navigation, media) with no internet.",
+    "shortDescAr": "مساعد Android يحافظ على الخصوصية: يتعرف على الكلام داخل الجهاز نفسه ويتحكم بالهاتف بالكامل (نقر، سحب، تنقل، وسائط) دون إنترنت.",
+    "detailedDescEn": "Most voice assistants send audio to the cloud and show a popup every time they listen. Jarvis runs the Vosk speech model directly on a raw 16 kHz microphone stream, restricted to the user's own command words, so recognition is instant and no audio ever leaves the phone. Recognised commands are passed to a native Kotlin Accessibility Service that performs real gestures and system actions in any app.\n\nUsers create their own commands (for example \"music\" → play/pause, or \"scroll down\" → swipe). A wake word puts the assistant into listening mode, and a floating overlay shows what it hears and does.",
+    "detailedDescAr": "معظم المساعدات الصوتية ترسل الصوت إلى السحابة وتعرض نافذة منبثقة كلما استمعت. يشغّل Jarvis نموذج Vosk للتعرف على الكلام مباشرة على بث خام من الميكروفون (16 كيلوهرتز)، مقيداً بكلمات الأوامر التي يحددها المستخدم، فيكون التعرف فورياً ولا يغادر أي صوت الهاتف. تُمرَّر الأوامر المعروفة إلى خدمة إمكانية الوصول (Accessibility Service) مكتوبة بـ Kotlin لتنفّذ إيماءات وإجراءات نظام حقيقية داخل أي تطبيق.\n\nينشئ المستخدم أوامره الخاصة (مثلاً «music» للتشغيل والإيقاف، أو «scroll down» للسحب)، وتُفعّل كلمة تنبيه وضع الاستماع، بينما تعرض نافذة عائمة ما يسمعه المساعد وما ينفّذه.",
+    "highlightsEn": [
+      "On-device Vosk speech recognition limited to the user's command words, for near-zero latency",
+      "Native Kotlin AccessibilityService for taps, swipes, Home/Back and media keys",
+      "Wake word and standby states, plus protection against double-firing",
+      "Custom command editor and a floating status overlay"
+    ],
+    "highlightsAr": [
+      "تعرف على الكلام داخل الجهاز عبر Vosk بمفردات مقيدة لاستجابة شبه فورية",
+      "خدمة إمكانية وصول بـ Kotlin للنقر والسحب والرجوع والصفحة الرئيسية ومفاتيح الوسائط",
+      "كلمة تنبيه ووضع استعداد مع حماية من التنفيذ المزدوج للأمر",
+      "محرر أوامر مخصص ونافذة حالة عائمة"
+    ],
+    "roleEn": "Solo project: design, Flutter UI, native Kotlin service and the voice pipeline.",
+    "roleAr": "مشروع فردي: التصميم وواجهة Flutter وخدمة Kotlin الأصلية ومعالجة الصوت.",
+    "tags": [
+      "AI",
+      "LLM & NLP",
+      "Mobile"
+    ],
+    "tech": [
+      "Flutter",
+      "Dart",
+      "Kotlin",
+      "Vosk",
+      "Android Accessibility",
+      "MethodChannel"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
   },
   {
-    "id": 6,
-    "titleEn": "Freelancer Job Portal",
-    "titleAr": "بوابة وظائف للمستقلين",
-    "shortDescEn": "A LinkedIn-like SPA tailored for publishing specialized work and matching freelancers.",
-    "shortDescAr": "تطبيق ويب يشبه لينكد إن مصمم لنشر الأعمال ومطابقة المستقلين.",
-    "detailedDescEn": "A comprehensive social platform connecting highly specialized freelancers with unique opportunities. Includes features like portfolio publishing, proposal submissions, real-time notifications, and a matching algorithm based on skill tags. Built ground-up in React to feel like a native application.",
-    "detailedDescAr": "منصة اجتماعية شاملة تربط المستقلين المتخصصين بفرص فريدة. تتضمن ميزات مثل نشر المحافظ وتقديم المقترحات وخوارزمية مطابقة بناءً على المهارات.",
-    "tags": ["React", "Web", "Laravel"],
-    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=Freelancer+Network",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/14b8a6?text=News+Feed",
-      "https://placehold.co/600x400/18181b/10b981?text=Proposal+System",
-      "https://placehold.co/600x400/18181b/06b6d4?text=User+Profile"
-    ]
+    "id": "chatinformer",
+    "featured": true,
+    "type": "personal",
+    "year": "2026",
+    "titleEn": "ChatInformer: Reusable AI Chatbot",
+    "titleAr": "ChatInformer: نظام دردشة ذكي قابل لإعادة الاستخدام",
+    "shortDescEn": "A plug-in AI assistant for any React site. One backend serves many businesses, answers only from each one's own facts, and runs free on local LLMs in Arabic and English.",
+    "shortDescAr": "مساعد ذكي يُضاف إلى أي موقع React. خادم واحد يخدم عدة جهات، ويجيب من معلومات كل جهة فقط، ويعمل مجاناً على نماذج لغوية محلية بالعربية والإنجليزية.",
+    "detailedDescEn": "ChatInformer is a reusable customer-service assistant. Each business (tenant) is a single JSON file containing its branding, suggested questions, a fallback contact and a knowledge base of facts. The FastAPI backend restricts the model to those facts, including things the business does not offer, so it does not make up answers. It streams replies token by token and answers in the visitor's language.\n\nAdding a chatbot to a new site needs no code: write a tenant file and render <ChatInformer tenantId=\"…\" />. It runs offline on Ollama (Qwen 2.5), and includes an admin dashboard for reading conversations and exporting them to CSV. It is used in production on the Takeed website.",
+    "detailedDescAr": "ChatInformer مساعد خدمة عملاء قابل لإعادة الاستخدام. كل جهة (Tenant) عبارة عن ملف JSON واحد يحتوي هويتها البصرية وأسئلة مقترحة ووسيلة تواصل بديلة وقاعدة معرفة من الحقائق. يقيّد خادم FastAPI النموذج بهذه الحقائق، بما فيها ما لا تقدّمه الجهة، فلا يختلق إجابات. ويبث الردود كلمة بكلمة بلغة الزائر نفسها.\n\nإضافة المساعد إلى موقع جديد لا تحتاج أي برمجة: يكفي ملف للجهة ومكوّن <ChatInformer tenantId=\"…\" />. يعمل دون إنترنت عبر Ollama (Qwen 2.5)، ويضم لوحة إدارة لقراءة المحادثات وتصديرها بصيغة CSV. وهو مستخدم فعلياً في موقع Takeed.",
+    "highlightsEn": [
+      "Multi-tenant JSON configs with per-tenant CORS and branding",
+      "Answers only from each tenant's facts, with explicit limits on what it may say",
+      "Streaming answers with a Stop button, and history saved in the browser",
+      "Admin dashboard with conversation logs and Excel-friendly CSV export"
+    ],
+    "highlightsAr": [
+      "إعدادات متعددة الجهات بملفات JSON مع CORS وهوية بصرية مستقلة لكل جهة",
+      "إجابات من حقائق كل جهة فقط مع حدود صريحة لما يمكن قوله",
+      "بث الإجابات مع زر إيقاف وحفظ المحادثة في المتصفح",
+      "لوحة إدارة لسجلات المحادثات مع تصدير CSV متوافق مع Excel"
+    ],
+    "roleEn": "Solo project: architecture, FastAPI backend, React component and prompt design.",
+    "roleAr": "مشروع فردي: البنية وخادم FastAPI ومكوّن React وتصميم التعليمات للنموذج.",
+    "tags": [
+      "AI",
+      "LLM & NLP",
+      "React"
+    ],
+    "tech": [
+      "Python",
+      "FastAPI",
+      "Ollama",
+      "Qwen 2.5",
+      "OpenAI SDK",
+      "SQLite",
+      "React",
+      "CSS Modules"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
   },
   {
-    "id": 7,
-    "titleEn": "Automated Zuma AI Bot",
-    "titleAr": "بوت زوما الآلي",
-    "shortDescEn": "An automated playing agent capable of playing Zuma using visual analysis.",
-    "shortDescAr": "وكيل لعب آلي قادر على لعب زوما باستخدام التحليل البصري.",
-    "detailedDescEn": "A purely visual bot that hooks into the screen buffer. It parses the chain of colored balls, determines the color of the loaded ball in the frog, calculates spatial trajectory angles to intersect identical colors, and simulates mouse clicks. Achieved high-score automation purely through CV and geometric math.",
-    "detailedDescAr": "بوت بصري يقرأ الشاشة ليحلل سلسلة الكرات الملونة، ويحسب زوايا المسار المكاني لضرب الألوان المتطابقة، ويحاكي نقرات الماوس. أتمتة بحتة من خلال الرؤية الحاسوبية والرياضيات.",
-    "tags": ["Computer Vision", "Python"],
-    "mainImg": "https://placehold.co/1200x600/09090b/10b981?text=Zuma+Vision+Bot",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/06b6d4?text=Color+Segmentation",
-      "https://placehold.co/600x400/18181b/14b8a6?text=Trajectory+Math",
-      "https://placehold.co/600x400/18181b/10b981?text=Automated+Execution"
-    ]
+    "id": "biscuitvision",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "BiscuitVision: Automated Quality Control",
+    "titleAr": "BiscuitVision: فحص جودة البسكويت آلياً",
+    "shortDescEn": "Real-time computer-vision inspection of biscuits on a production line, with an expert system that explains defects and recommends fixes.",
+    "shortDescAr": "فحص بصري للبسكويت على خط الإنتاج في الوقت الحقيقي، مع نظام خبير يفسّر العيوب ويقترح الحلول.",
+    "detailedDescEn": "A desktop quality-control station for a biscuit factory. It watches the conveyor video, separates touching biscuits with watershed segmentation, and flags cracked, burned, under-cooked, over-sized, under-sized and contaminated biscuits. A Keras CNN classifies defects, and every result is stored in a database.\n\nAt the end of the day, a rule-based expert system with certainty factors turns the defect statistics into likely root causes (such as conveyor speed or a foreign object in the dough) and recommends corrective actions. Everything is shown on a Qt dashboard with live charts.",
+    "detailedDescAr": "محطة لمراقبة الجودة في مصنع بسكويت. تراقب فيديو خط الإنتاج، وتفصل حبات البسكويت المتلاصقة بخوارزمية Watershed، وتكتشف المكسور والمحروق وغير المكتمل الخَبز وكبير الحجم وصغيره والملوَّث. يصنّف نموذج CNN مبني بـ Keras العيوب، وتُحفظ جميع النتائج في قاعدة بيانات.\n\nفي نهاية اليوم يحوّل نظام خبير قائم على القواعد ومعاملات اليقين إحصاءات العيوب إلى أسباب محتملة (مثل سرعة السير أو وجود جسم غريب في العجين) ويقترح إجراءات تصحيحية، مع عرض كل ذلك على لوحة Qt برسوم بيانية حية.",
+    "highlightsEn": [
+      "Watershed segmentation, contour and crack analysis with OpenCV",
+      "CNN defect classifier built with TensorFlow / Keras",
+      "Experta expert system with certainty factors for diagnosis",
+      "PySide6 dashboard, SQLAlchemy database and multiprocessing"
+    ],
+    "highlightsAr": [
+      "تقطيع Watershed وتحليل الحواف والشقوق باستخدام OpenCV",
+      "مصنِّف عيوب CNN باستخدام TensorFlow / Keras",
+      "نظام خبير Experta بمعاملات يقين للتشخيص",
+      "لوحة PySide6 وقاعدة بيانات SQLAlchemy ومعالجة متعددة العمليات"
+    ],
+    "tags": [
+      "AI",
+      "Computer Vision",
+      "Machine Learning"
+    ],
+    "tech": [
+      "Python",
+      "OpenCV",
+      "TensorFlow",
+      "Keras",
+      "Experta",
+      "PySide6",
+      "SQLAlchemy"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Built the expert system and the colour filtering, and contributed to defect detection and to choosing the detection thresholds.",
+    "roleAr": "بناء النظام الخبير والفلترة اللونية، والمساهمة في كشف العيوب واختيار قيم العتبات."
   },
   {
-    "id": 8,
-    "titleEn": "Gym Management Dashboard",
-    "titleAr": "لوحة إدارة الصالة الرياضية",
-    "shortDescEn": "A modernized administrative dashboard replacing an outdated gym system.",
-    "shortDescAr": "لوحة إدارية حديثة تحل محل نظام الصالة الرياضية القديم.",
-    "detailedDescEn": "Transformed an old, clunky desktop application into a lightning-fast React SPA. The dashboard manages hundreds of active memberships, tracks subscription expiry, handles trainer schedules, and generates financial visualizations.",
-    "detailedDescAr": "تحويل تطبيق سطح مكتب قديم إلى تطبيق React سريع للغاية. تدير اللوحة مئات العضويات النشطة وتتتبع انتهاء الاشتراك وتتعامل مع جداول المدربين.",
-    "tags": ["React", "Web"],
-    "mainImg": "https://placehold.co/1200x600/09090b/14b8a6?text=Gym+Admin+UI",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/06b6d4?text=Member+Database",
-      "https://placehold.co/600x400/18181b/10b981?text=Financial+Charts",
-      "https://placehold.co/600x400/18181b/14b8a6?text=Trainer+Schedules"
-    ]
+    "id": "biscuit-expert-system",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Biscuit QC Expert System",
+    "titleAr": "نظام خبير لجودة البسكويت",
+    "shortDescEn": "A rule-based expert system that diagnoses biscuit production problems from defect counts and recommends corrective actions, with certainty factors.",
+    "shortDescAr": "نظام خبير قائم على القواعد يشخّص مشكلات إنتاج البسكويت من أعداد العيوب ويقترح إجراءات تصحيحية مع معاملات يقين.",
+    "detailedDescEn": "A knowledge-based system for a factory's quality-control team. The operator answers a guided set of questions about a batch: its size, the number of defective biscuits, and counts per defect type and severity (cracked, burned, under-cooked, over-sized, under-sized, contaminated). The inference engine validates the answers and asks again when they are inconsistent, for example when one defect type exceeds the total number of defects. It then infers the likely causes and the best fixes.\n\nEach diagnosis carries a certainty factor (that defect type's share of all defects), and rule salience orders validation, scoring and recommendation. This engine later became the reasoning core of BiscuitVision, where it runs on live camera data instead of manual input.",
+    "detailedDescAr": "نظام قائم على المعرفة لفريق مراقبة الجودة في المصنع. يجيب المشغّل عن أسئلة موجّهة حول الدفعة: حجمها، وعدد الحبات المعيبة، وعدد كل نوع من العيوب وشدته (مكسور، محروق، غير مكتمل الخَبز، كبير الحجم، صغير الحجم، ملوّث). يتحقق محرك الاستدلال من الإجابات ويعيد السؤال عند وجود تناقض، مثلاً حين يتجاوز عدد نوع واحد من العيوب العدد الكلي، ثم يستنتج الأسباب المحتملة وأفضل الحلول.\n\nيحمل كل تشخيص معامل يقين (نسبة هذا العيب من مجموع العيوب)، وتنظّم أولويات القواعد (Salience) ترتيب التحقق والتقييم والتوصية. وأصبح هذا المحرك لاحقاً نواة الاستدلال في BiscuitVision حيث يعمل على بيانات الكاميرا الحية بدلاً من الإدخال اليدوي.",
+    "highlightsEn": [
+      "Experta (CLIPS-style) rule engine with certainty factors",
+      "Answer validation with retract-and-ask-again rules",
+      "Severity tiers for cracks and burns",
+      "Tkinter GUI with Matplotlib defect charts"
+    ],
+    "highlightsAr": [
+      "محرك قواعد Experta (على نمط CLIPS) مع معاملات يقين",
+      "التحقق من الإجابات مع قواعد للتراجع وإعادة السؤال",
+      "مستويات شدة للشقوق والاحتراق",
+      "واجهة Tkinter مع رسوم Matplotlib للعيوب"
+    ],
+    "tags": [
+      "AI"
+    ],
+    "tech": [
+      "Python",
+      "Experta",
+      "Tkinter",
+      "Matplotlib"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Built the expert system: the rules, certainty factors and recommendation logic.",
+    "roleAr": "بناء النظام الخبير: القواعد ومعاملات اليقين ومنطق التوصيات."
   },
   {
-    "id": 9,
-    "titleEn": "Mafia Mobile Sandbox",
-    "titleAr": "لعبة مافيا للجوال",
-    "shortDescEn": "A Flutter mobile game with complex narrative decision trees and a hidden sandbox mode.",
-    "shortDescAr": "لعبة جوال Flutter بأشجار قرار سردية معقدة ووضع رمل سري.",
-    "detailedDescEn": "A mobile development venture using Flutter. The game features highly stylized UI, complex state management for the player's inventory and allegiances, and intricate narrative decision trees. Includes a hidden sandbox mode triggered by specific gameplay sequences for ultimate freedom.",
-    "detailedDescAr": "مشروع تطوير جوال باستخدام Flutter. تتميز اللعبة بواجهة مستخدم أنيقة وإدارة حالة معقدة لمخزون اللاعب، وأشجار قرار سردية معقدة. تتضمن وضع لعب مفتوح مخفي.",
-    "tags": ["Flutter", "Mobile", "Game"],
-    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=Mafia+Mobile+App",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/14b8a6?text=Narrative+Choices",
-      "https://placehold.co/600x400/18181b/10b981?text=Inventory+State",
-      "https://placehold.co/600x400/18181b/06b6d4?text=Hidden+Sandbox"
-    ]
+    "id": "zumabot",
+    "featured": false,
+    "type": "course",
+    "year": "2026",
+    "titleEn": "ZumaBot: Computer-Vision Game Player",
+    "titleAr": "ZumaBot: لاعب آلي بالرؤية الحاسوبية",
+    "shortDescEn": "A bot that plays Zuma on its own, using only screen capture, classical computer vision and simulated mouse clicks.",
+    "shortDescAr": "بوت يلعب لعبة Zuma بنفسه، معتمداً فقط على التقاط الشاشة والرؤية الحاسوبية الكلاسيكية ونقرات فأرة محاكاة.",
+    "detailedDescEn": "ZumaBot never reads the game's memory. It looks at the screen like a person does. It first finds the game window automatically, scoring candidate rectangles on edge density, aspect ratio, detected circles and texture. It then builds HSV colour masks, cleans them with morphology, and uses a distance transform to locate each ball. The balls are ordered into chains, and same-colour groups are scored as targets before the bot aims and fires.\n\nIt was tested on several laptops and resolutions, with no manual calibration and no training data.",
+    "detailedDescAr": "لا يقرأ ZumaBot ذاكرة اللعبة، بل ينظر إلى الشاشة كما يفعل الإنسان. يكتشف نافذة اللعبة تلقائياً عبر تقييم المستطيلات المرشحة حسب كثافة الحواف ونسبة الأبعاد والدوائر المكتشفة والنسيج، ثم ينشئ أقنعة لونية في فضاء HSV وينظفها بالعمليات المورفولوجية، ويحدد مراكز الكرات بتحويل المسافة. بعد ذلك يرتب الكرات في سلاسل ويقيّم المجموعات المتشابهة كأهداف قبل أن يصوّب ويطلق.\n\nجُرّب على عدة حواسيب وبدقّات شاشة مختلفة دون أي معايرة يدوية أو بيانات تدريب.",
+    "highlightsEn": [
+      "Automatic game-window detection with a combined scoring function",
+      "HSV masks, morphology and distance-transform ball detection",
+      "Chain reconstruction and target scoring for each shot",
+      "Real-time play with PyAutoGUI"
+    ],
+    "highlightsAr": [
+      "اكتشاف تلقائي لنافذة اللعبة بدالة تقييم مركّبة",
+      "أقنعة HSV وعمليات مورفولوجية وتحويل المسافة لاكتشاف الكرات",
+      "إعادة بناء سلاسل الكرات وتقييم الأهداف لكل طلقة",
+      "لعب في الوقت الحقيقي باستخدام PyAutoGUI"
+    ],
+    "tags": [
+      "AI",
+      "Computer Vision",
+      "Game"
+    ],
+    "tech": [
+      "Python",
+      "OpenCV",
+      "NumPy",
+      "mss",
+      "PyAutoGUI"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Developed the bot's algorithms and the colour filtering together with one teammate.",
+    "roleAr": "تطوير خوارزميات البوت والفلترة اللونية بالتعاون مع زميل واحد."
   },
   {
-    "id": 10,
-    "titleEn": "Interactive Touchscreen Wheel",
-    "titleAr": "عجلة تفاعلية تعمل باللمس",
-    "shortDescEn": "An interactive decision wheel built with HTML/JS Canvas logic.",
-    "shortDescAr": "عجلة قرار تفاعلية مبنية باستخدام منطق HTML/JS Canvas.",
-    "detailedDescEn": "A custom interactive decision wheel built completely from scratch using HTML5 Canvas and JavaScript physics calculations. It features realistic spinning momentum, touch and mouse swipe support, and dynamic slice rendering.",
-    "detailedDescAr": "عجلة قرار تفاعلية مبنية بالكامل من الصفر باستخدام HTML5 Canvas وحسابات فيزياء جافا سكريبت. تتميز بزخم دوران واقعي، ودعم التمرير، وعرض ديناميكي.",
-    "tags": ["Web", "Design"],
-    "mainImg": "https://placehold.co/1200x600/09090b/10b981?text=Interactive+Canvas+Wheel",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/06b6d4?text=Physics+Calculations",
-      "https://placehold.co/600x400/18181b/14b8a6?text=Canvas+Rendering",
-      "https://placehold.co/600x400/18181b/10b981?text=Touch+Events"
-    ]
+    "id": "fite-classification",
+    "featured": false,
+    "type": "course",
+    "year": "2026",
+    "titleEn": "FITE Classification Challenge (MLOps)",
+    "titleAr": "تحدي التصنيف FITE (MLOps)",
+    "shortDescEn": "Imbalanced multiclass classification with tracked, reproducible experiments. Public leaderboard F1: 0.98.",
+    "shortDescAr": "تصنيف متعدد الفئات لبيانات غير متوازنة مع تجارب موثّقة قابلة لإعادة الإنتاج. نتيجة F1 على لوحة الترتيب: 0.98.",
+    "detailedDescEn": "A 3-class competition with a 31:1 class imbalance, where accuracy is misleading, so models were chosen by macro-F1 under stratified 5-fold cross-validation. Preprocessing sits inside scikit-learn pipelines, so nothing leaks between folds. Six models were compared, and LightGBM won with a CV macro-F1 of 0.9936 and a public leaderboard F1 of 0.98046.\n\nEvery run is tracked in MLflow, the best model is logged together with its preprocessing, and the datasets are versioned with DVC on a Google Drive remote.",
+    "detailedDescAr": "مسابقة تصنيف بثلاث فئات بعدم توازن يصل إلى 31:1، حيث تكون الدقة مضللة، لذا اختيرت النماذج بمقياس Macro-F1 ضمن تحقق متقاطع طبقي من 5 أجزاء. وُضعت المعالجة المسبقة داخل Pipelines في scikit-learn لمنع تسرب البيانات بين الأجزاء. قورنت ستة نماذج وتفوّق LightGBM بنتيجة 0.9936 في التحقق المتقاطع و0.98046 على لوحة الترتيب العامة.\n\nكل تجربة موثّقة في MLflow، ويُحفظ أفضل نموذج مع معالجته المسبقة، وتُدار نسخ البيانات عبر DVC على Google Drive.",
+    "highlightsEn": [
+      "LightGBM with class weighting: CV macro-F1 0.9936, leaderboard F1 0.98046",
+      "Leak-free scikit-learn pipelines evaluated on shared stratified folds",
+      "MLflow experiment tracking and model logging",
+      "DVC data versioning"
+    ],
+    "highlightsAr": [
+      "LightGBM بأوزان للفئات: Macro-F1 = 0.9936، ونتيجة 0.98046 على لوحة الترتيب",
+      "Pipelines خالية من تسرب البيانات مع أجزاء طبقية موحّدة للتقييم",
+      "تتبع التجارب وحفظ النماذج عبر MLflow",
+      "إدارة نسخ البيانات عبر DVC"
+    ],
+    "tags": [
+      "AI",
+      "Machine Learning"
+    ],
+    "tech": [
+      "Python",
+      "scikit-learn",
+      "LightGBM",
+      "XGBoost",
+      "MLflow",
+      "DVC"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Tried different data-cleaning methods to get the highest prediction score.",
+    "roleAr": "تجربة طرق مختلفة لتنظيف البيانات للوصول إلى أعلى دقة تنبؤ."
   },
   {
-    "id": 11,
-    "titleEn": "4 Marketing SPAs",
-    "titleAr": "أربعة تطبيقات تسويقية",
-    "shortDescEn": "Four optimized marketing Single Page Applications for different companies.",
-    "shortDescAr": "أربعة تطبيقات ويب ذات صفحة واحدة محسنة للتسويق لشركات مختلفة.",
-    "detailedDescEn": "Developed four distinct, highly responsive, SEO-optimized landing pages for corporate clients. Focused heavily on high-performance animations, fluid typography, and immediate call-to-action conversions.",
-    "detailedDescAr": "تطوير أربع صفحات هبوط محسنة وتفاعلية لعملاء مختلفين، مع التركيز على الرسوم المتحركة عالية الأداء والطباعة السلسة.",
-    "tags": ["React", "Web", "Design"],
-    "mainImg": "https://placehold.co/1200x600/09090b/06b6d4?text=Marketing+SPAs",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/14b8a6?text=Landing+Page+1",
-      "https://placehold.co/600x400/18181b/10b981?text=Landing+Page+2",
-      "https://placehold.co/600x400/18181b/06b6d4?text=Conversion+Funnels"
-    ]
+    "id": "football-nn",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Football Transfer Value Predictor",
+    "titleAr": "التنبؤ بالقيمة السوقية للاعبي كرة القدم",
+    "shortDescEn": "Neural networks that estimate players' market value and recommend whether a club should buy them (95.3% accuracy).",
+    "shortDescAr": "شبكات عصبية تقدّر القيمة السوقية للاعبين وتوصي بشرائهم أو عدمه (دقة 95.3%).",
+    "detailedDescEn": "A neural-network study on a Kaggle transfer dataset, with separate models for outfield players and goalkeepers. The regression experiments compared different input and target scaling strategies, and showed that scaling the target is what makes training converge. A dense classifier predicts a \"buy\" recommendation with 95.3% test accuracy, and its hyperparameters were tuned with GridSearchCV through SciKeras.",
+    "detailedDescAr": "دراسة بالشبكات العصبية على بيانات انتقالات من Kaggle، مع نماذج منفصلة للاعبي الميدان وحراس المرمى. قارنت تجارب الانحدار استراتيجيات مختلفة لتحجيم المدخلات والمخرجات، وأظهرت أن تحجيم المخرجات هو ما يجعل التدريب يتقارب. ويتنبأ مصنِّف كثيف بتوصية «الشراء» بدقة 95.3%، مع ضبط المعاملات عبر GridSearchCV وSciKeras.",
+    "highlightsEn": [
+      "Separate models for outfield players and goalkeepers",
+      "Buy-recommendation classifier with 95.3% test accuracy",
+      "Experiments on how input and target scaling affect training"
+    ],
+    "highlightsAr": [
+      "نماذج مستقلة للاعبي الميدان وحراس المرمى",
+      "مصنِّف توصية الشراء بدقة اختبار 95.3%",
+      "تجارب على أثر تحجيم المدخلات والمخرجات في التدريب"
+    ],
+    "tags": [
+      "AI",
+      "Machine Learning"
+    ],
+    "tech": [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "scikit-learn",
+      "SciKeras",
+      "pandas"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Filtered the columns and chose which information to feed the model so it gives accurate results.",
+    "roleAr": "تصفية الأعمدة واختيار المعلومات المناسبة لتغذية النموذج للحصول على نتائج دقيقة."
   },
   {
-    "id": 12,
-    "titleEn": "Damascus Coin Mascot Logo",
-    "titleAr": "شعار تعويذة العملة الدمشقية",
-    "shortDescEn": "A Figma brand mascot design holding a 1930s Damascus Syrian coin.",
-    "shortDescAr": "تصميم شخصية تعويذة العلامة التجارية باستخدام Figma تحمل عملة دمشقية سورية من الثلاثينيات.",
-    "detailedDescEn": "A complete UI/UX and brand identity project in Figma. The centerpiece is a meticulously designed mascot holding a historically accurate representation of a 1930s Damascus Syrian coin, blending modern vector art with historical homage.",
-    "detailedDescAr": "مشروع هوية بصرية وتصميم واجهة مستخدم كامل في Figma. القطعة المركزية هي تعويذة مصممة بدقة تحمل تمثيلًا لعملة دمشقية سورية من الثلاثينيات.",
-    "tags": ["Figma", "Design"],
-    "mainImg": "https://placehold.co/1200x600/09090b/14b8a6?text=Mascot+Coin+Design",
-    "gallery": [
-      "https://placehold.co/600x400/18181b/06b6d4?text=Vector+Drafts",
-      "https://placehold.co/600x400/18181b/10b981?text=Color+Palette",
-      "https://placehold.co/600x400/18181b/14b8a6?text=Final+Export"
-    ]
+    "id": "autovalue",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "AutoValue: Used-Car Price Prediction",
+    "titleAr": "AutoValue: التنبؤ بأسعار السيارات المستعملة",
+    "shortDescEn": "A Kaggle regression challenge on messy scraped car ads, solved with heavy text mining, VIN decoding and tuned gradient boosting.",
+    "shortDescAr": "تحدي انحدار على Kaggle لإعلانات سيارات مجمّعة وغير منظمة، باستخدام تنقيب مكثف في النصوص وفك رموز VIN ونماذج Gradient Boosting مضبوطة.",
+    "detailedDescEn": "Most structured columns in this dataset were empty or corrupted, and the real information was hidden in free text. The work recovered year (including decoding the VIN), make and model (with fuzzy matching), engine, drive type, mileage and colours using regex extractors. It then compared linear models, XGBoost, CatBoost and Optuna-tuned XGBoost with different target transforms. The best setup, XGBoost on log(price), reached an RMSLE of about 0.59 in cross-validation.",
+    "detailedDescAr": "كانت معظم الأعمدة المنظمة في هذه البيانات فارغة أو تالفة، والمعلومة الحقيقية مخفية في النصوص الحرة. استُخرجت سنة الصنع (بما في ذلك فك رمز VIN) والشركة والطراز (بمطابقة تقريبية) والمحرك ونوع الدفع والمسافة المقطوعة والألوان بتعابير نمطية، ثم قورنت النماذج الخطية وXGBoost وCatBoost وXGBoost المضبوط بـ Optuna مع تحويلات مختلفة للهدف. أفضل إعداد (XGBoost على لوغاريتم السعر) حقق RMSLE ≈ 0.59 في التحقق المتقاطع.",
+    "highlightsEn": [
+      "Regex text mining and VIN decoding to recover missing features",
+      "Optuna-tuned XGBoost and smoothed target encoding",
+      "Comparison of log and square-root target transforms"
+    ],
+    "highlightsAr": [
+      "تنقيب نصي بالتعابير النمطية وفك رموز VIN لاستعادة الميزات المفقودة",
+      "XGBoost مضبوط بـ Optuna مع ترميز هدف منعَّم",
+      "مقارنة تحويلات اللوغاريتم والجذر التربيعي للهدف"
+    ],
+    "tags": [
+      "AI",
+      "Machine Learning"
+    ],
+    "tech": [
+      "Python",
+      "pandas",
+      "XGBoost",
+      "CatBoost",
+      "Optuna",
+      "scikit-learn"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Tried different data-cleaning methods on the messy scraped listings to get the highest prediction score.",
+    "roleAr": "تجربة طرق مختلفة لتنظيف بيانات الإعلانات المجمّعة غير المنظمة للوصول إلى أعلى دقة تنبؤ."
+  },
+  {
+    "id": "fuzzy-dda",
+    "featured": false,
+    "type": "course",
+    "year": "2026",
+    "titleEn": "Adaptive Space Shooter: Fuzzy Difficulty",
+    "titleAr": "لعبة فضاء بصعوبة تكيفية (منطق ضبابي)",
+    "shortDescEn": "A fuzzy expert system that adjusts a space shooter's difficulty in real time to keep the player in the flow.",
+    "shortDescAr": "نظام خبير بالمنطق الضبابي يضبط صعوبة لعبة فضائية في الوقت الحقيقي ليبقى اللاعب في حالة التركيز والمتعة.",
+    "detailedDescEn": "A Mamdani fuzzy engine replaces the game's static enemy spawning. It reads six inputs (mobs killed, time survived, health, lives, gun level and restarts) and sets three outputs (enemy speed, spawn delay and enemy size) through 24 rules with centroid defuzzification, including \"mercy\" rules when the player is struggling.\n\nA built-in instructor view lets you type inputs by hand, plots all nine membership functions live, and highlights the rules that are currently firing. The base game is adapted from the open-source SpaceShooter project.",
+    "detailedDescAr": "يستبدل محرك ضبابي من نوع Mamdani منطق ظهور الأعداء الثابت في اللعبة. يقرأ ست مدخلات (الأعداء المقتولون، مدة البقاء، الصحة، الأرواح، مستوى السلاح، مرات الإعادة) ويضبط ثلاثة مخرجات (سرعة الأعداء، فترة الظهور، حجم العدو) عبر 24 قاعدة مع إزالة الضبابية بطريقة مركز الثقل، بما فيها قواعد «رحمة» عندما يواجه اللاعب صعوبة.\n\nتتيح واجهة تعليمية مدمجة إدخال القيم يدوياً، وترسم دوال الانتماء التسع مباشرة، وتبرز القواعد المفعّلة حالياً. اللعبة الأساسية مقتبسة من مشروع SpaceShooter مفتوح المصدر.",
+    "highlightsEn": [
+      "6 inputs, 3 outputs and 24 Mamdani rules",
+      "Live membership-function plots and highlighting of active rules",
+      "Manual input mode for testing and demonstration"
+    ],
+    "highlightsAr": [
+      "6 مدخلات و3 مخرجات و24 قاعدة Mamdani",
+      "رسوم حية لدوال الانتماء مع إبراز القواعد المفعّلة",
+      "وضع إدخال يدوي للاختبار والعرض"
+    ],
+    "tags": [
+      "AI",
+      "Game"
+    ],
+    "tech": [
+      "Python",
+      "scikit-fuzzy",
+      "Pygame",
+      "NumPy"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Two-person project: designed all of the fuzzy rules, applied them to the game, and built the live visualisation of the membership functions.",
+    "roleAr": "مشروع لشخصين: تصميم جميع القواعد الضبابية وتطبيقها على اللعبة، وبناء العرض الحي لدوال الانتماء."
+  },
+  {
+    "id": "valuable-offers",
+    "featured": false,
+    "type": "client",
+    "year": "2026",
+    "titleEn": "Valuable Offers: Coupons Marketplace",
+    "titleAr": "Valuable Offers: متجر القسائم والبطاقات المسبقة الدفع",
+    "shortDescEn": "A bilingual e-commerce platform selling vendor coupons, prepaid cards and bundles, with card payments and PDF receipts with QR codes.",
+    "shortDescAr": "منصة تجارة إلكترونية ثنائية اللغة لبيع قسائم الخصم والبطاقات المسبقة الدفع والباقات، مع دفع بالبطاقات وإيصالات PDF تحتوي رمز QR.",
+    "detailedDescEn": "Customers browse offers by city and category, verify their phone with an OTP, and pay by card through ClickPay. Each purchase reserves a unique coupon code, produces a downloadable receipt, and automatically creates an invoice in the Daftra accounting system. Admins manage vendors, offers, bulk code imports from Excel, bundles and statistics from a separate React dashboard.",
+    "detailedDescAr": "يتصفح العملاء العروض حسب المدينة والفئة، ويتحققون من رقم الهاتف برمز OTP، ويدفعون بالبطاقة عبر ClickPay. تحجز كل عملية شراء رمز قسيمة فريداً، وتُنشئ إيصالاً قابلاً للتنزيل، وتسجّل فاتورة تلقائياً في نظام Daftra المحاسبي. ويدير المسؤولون البائعين والعروض واستيراد الرموز من Excel والباقات والإحصاءات من لوحة تحكم React مستقلة.",
+    "highlightsEn": [
+      "Customer site: OTP authentication, cart and Buy Now, payment flow, receipts and profile",
+      "Admin dashboard screens for offers and vendors",
+      "Full Arabic and English translations"
+    ],
+    "highlightsAr": [
+      "موقع العملاء: المصادقة برمز OTP والسلة والشراء المباشر ومسار الدفع والإيصالات والملف الشخصي",
+      "شاشات العروض والبائعين في لوحة الإدارة",
+      "ترجمة كاملة بالعربية والإنجليزية"
+    ],
+    "roleEn": "Front-end developer for the customer website and admin dashboard.",
+    "roleAr": "مطوّر واجهات موقع العملاء ولوحة الإدارة.",
+    "tags": [
+      "React",
+      "Laravel"
+    ],
+    "tech": [
+      "React 19",
+      "Zustand",
+      "React Router",
+      "i18next",
+      "Laravel 12",
+      "ClickPay",
+      "Daftra API"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "takeed",
+    "featured": false,
+    "type": "client",
+    "year": "2026",
+    "titleEn": "Takeed: ISO Certification Website",
+    "titleAr": "Takeed: موقع شهادات الأيزو",
+    "shortDescEn": "A bilingual website for an ISO certification and engineering company, with certificate verification, online applications and an AI chat assistant.",
+    "shortDescAr": "موقع ثنائي اللغة لشركة شهادات أيزو وخدمات هندسية، يتضمن التحقق من الشهادات والتقديم الإلكتروني ومساعد دردشة ذكي.",
+    "detailedDescEn": "Redesigned in Figma and rebuilt in React. The site presents the company's ISO certifications (9001, 14001, 45001, 22000, 27001 and more) and services. It also includes a two-step certificate verification flow that opens the official accreditation registry, certificate templates rendered with pdf.js, application and contact forms, and full Arabic RTL support. The ChatInformer assistant answers visitors' questions from the company's own knowledge base.",
+    "detailedDescAr": "أُعيد تصميمه في Figma وبناؤه بـ React. يعرض الموقع شهادات الأيزو التي تقدّمها الشركة (9001 و14001 و45001 و22000 و27001 وغيرها) وخدماتها، ويتضمن مساراً من خطوتين للتحقق من الشهادات يفتح السجل الرسمي لجهة الاعتماد، وعرض نماذج الشهادات عبر pdf.js، ونماذج للتقديم والتواصل، ودعماً كاملاً للعربية. ويجيب مساعد ChatInformer عن أسئلة الزوار من قاعدة معرفة الشركة.",
+    "highlightsEn": [
+      "UI design in Figma and implementation in React",
+      "Certificate verification page and PDF template viewer",
+      "ChatInformer AI assistant built in"
+    ],
+    "highlightsAr": [
+      "تصميم الواجهة في Figma وتنفيذها بـ React",
+      "صفحة التحقق من الشهادات وعارض نماذج PDF",
+      "مساعد ChatInformer الذكي مدمج"
+    ],
+    "roleEn": "Design and front end: new sections, the certificate check, and the AI assistant integration.",
+    "roleAr": "التصميم والواجهات: الأقسام الجديدة والتحقق من الشهادات ودمج المساعد الذكي.",
+    "tags": [
+      "React",
+      "Design",
+      "LLM & NLP"
+    ],
+    "tech": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "pdf.js",
+      "EmailJS",
+      "Figma",
+      "FastAPI"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "alkhani-factory",
+    "featured": false,
+    "type": "personal",
+    "year": "2026",
+    "titleEn": "Alkhani Factory: B2B Manufacturer Website",
+    "titleAr": "معمل الخاني: موقع مصنع جوارب",
+    "shortDescEn": "A bilingual showcase and inquiry site for a family sock factory. Wholesale buyers browse the catalogue and send orders straight to WhatsApp or email.",
+    "shortDescAr": "موقع عرض واستفسارات ثنائي اللغة لمصنع جوارب عائلي: يتصفح تجار الجملة الكتالوج ويرسلون طلباتهم مباشرة عبر واتساب أو البريد الإلكتروني.",
+    "detailedDescEn": "A manufacturer's site, deliberately not an online shop: no prices and no cart. Buyers filter the catalogue by wearer, style and length, open detailed product pages, explore yarn materials, or send their own design. Every call to action builds a pre-filled WhatsApp or email message in the visitor's language. The catalogue is a JSON file, so adding a product needs no code. The design uses an asymmetric, editorial layout built around knit textures, and was checked on nine screen sizes with Playwright.",
+    "detailedDescAr": "موقع مصنع وليس متجراً إلكترونياً عن قصد: لا أسعار ولا سلة شراء. يصفّي التجار الكتالوج حسب الفئة والنمط والطول، ويفتحون صفحات منتجات مفصلة، ويستكشفون أنواع الخيوط، أو يرسلون تصميمهم الخاص. كل زر تواصل ينشئ رسالة واتساب أو بريداً معبأً مسبقاً بلغة الزائر. الكتالوج ملف JSON فلا تحتاج إضافة منتج إلى أي برمجة، والتصميم تحريري غير متماثل مستوحى من ملمس النسيج، مع فحص التجاوب على تسعة مقاسات شاشات عبر Playwright.",
+    "highlightsEn": [
+      "Brief, design direction and implementation, all done solo",
+      "Catalogue driven by a JSON file, with bilingual content",
+      "Order inquiries sent through WhatsApp and email",
+      "Responsive audit with Playwright"
+    ],
+    "highlightsAr": [
+      "كتابة المتطلبات والتوجه التصميمي والتنفيذ بشكل فردي",
+      "كتالوج يُدار من ملف JSON بمحتوى ثنائي اللغة",
+      "إرسال الطلبات عبر واتساب والبريد الإلكتروني",
+      "فحص التجاوب باستخدام Playwright"
+    ],
+    "roleEn": "Solo project: design and development.",
+    "roleAr": "مشروع فردي: التصميم والتطوير.",
+    "tags": [
+      "React",
+      "Design"
+    ],
+    "tech": [
+      "React 19",
+      "Vite",
+      "React Router",
+      "Tailwind CSS 4",
+      "CSS Modules",
+      "Figma",
+      "Playwright"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "al-muthawroon",
+    "featured": false,
+    "type": "client",
+    "year": "",
+    "titleEn": "Al Muthawroon Al Arab: Corporate Website",
+    "titleAr": "المثورون العرب: الموقع الرسمي",
+    "shortDescEn": "A responsive corporate website for a UAE steel-structure and contracting company, showing its projects across the GCC.",
+    "shortDescAr": "موقع رسمي متجاوب لشركة إماراتية للهياكل الفولاذية والمقاولات، يعرض مشاريعها في دول الخليج.",
+    "detailedDescEn": "Designed in Figma and built as a React single-page app for a steel-structure company in Sharjah. It covers the company's story, expertise and featured projects (such as the Qatar University Engineering College building), each with a photo carousel loaded from a JSON file, plus a full projects page and a contact form. Images are optimised as WebP.",
+    "detailedDescAr": "صُمّم في Figma وبُني كتطبيق صفحة واحدة بـ React لشركة هياكل فولاذية في الشارقة. يعرض قصة الشركة وخبراتها ومشاريعها المميزة (مثل مبنى كلية الهندسة في جامعة قطر) مع معرض صور لكل مشروع من ملف JSON، إضافة إلى صفحة كاملة للمشاريع ونموذج تواصل. الصور محسّنة بصيغة WebP.",
+    "highlightsEn": [
+      "Figma design turned into React",
+      "Project gallery loaded from JSON",
+      "Optimised WebP media"
+    ],
+    "highlightsAr": [
+      "تحويل تصميم Figma إلى React",
+      "معرض مشاريع يُحمّل من ملف JSON",
+      "صور محسّنة بصيغة WebP"
+    ],
+    "roleEn": "Design and front-end development.",
+    "roleAr": "التصميم وتطوير الواجهات.",
+    "tags": [
+      "React",
+      "Design"
+    ],
+    "tech": [
+      "React",
+      "Vite",
+      "React Router",
+      "Tailwind CSS",
+      "CSS Modules",
+      "Figma"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "jobera",
+    "featured": false,
+    "type": "team",
+    "year": "",
+    "titleEn": "Jobera: Jobs & Freelancing Platform",
+    "titleAr": "Jobera: منصة الوظائف والعمل الحر",
+    "shortDescEn": "A two-sided job board and freelancing marketplace with real-time chat, push notifications, a wallet, and web and mobile apps.",
+    "shortDescAr": "منصة وظائف وعمل حر للطرفين مع دردشة فورية وإشعارات وتطبيقات للويب والجوال ومحفظة إلكترونية.",
+    "detailedDescEn": "Individuals and companies build rich profiles (skills, education, certificates, portfolios), post and apply for full-time, part-time and freelance work, send offers, chat in real time, and pay through an in-app wallet with redeem codes. The system includes a job feed with statistics, bookmarks, reviews, Google sign-in, web push notifications and an admin dashboard. It has a Laravel API, a React web app and a Flutter mobile app.",
+    "detailedDescAr": "ينشئ الأفراد والشركات ملفات تعريفية غنية (المهارات، التعليم، الشهادات، معارض الأعمال)، وينشرون الوظائف الدائمة والجزئية ومشاريع العمل الحر ويتقدمون إليها، ويقدّمون العروض، ويتراسلون فورياً، ويدفعون عبر محفظة داخلية برموز شحن. وتضم المنصة صفحة وظائف مع إحصاءات، وإشارات مرجعية، وتقييمات، وتسجيل دخول عبر Google، وإشعارات فورية، ولوحة إدارة. وتتكون من واجهة Laravel البرمجية وتطبيق ويب React وتطبيق Flutter.",
+    "highlightsEn": [
+      "Regular jobs and freelance jobs with offers and applicant lists",
+      "Real-time chat with Pusher / Reverb, and push notifications",
+      "Wallet, transactions and redeem codes"
+    ],
+    "highlightsAr": [
+      "وظائف عادية ومشاريع عمل حر مع العروض وقوائم المتقدمين",
+      "دردشة فورية عبر Pusher / Reverb وإشعارات فورية",
+      "محفظة ومعاملات ورموز شحن"
+    ],
+    "tags": [
+      "React",
+      "Laravel",
+      "Mobile"
+    ],
+    "tech": [
+      "React 19",
+      "Bootstrap",
+      "CKEditor",
+      "Recharts",
+      "Laravel 12",
+      "Passport",
+      "Pusher",
+      "Flutter",
+      "Firebase"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Built the entire web frontend, including the real-time chat, and most of the admin dashboard.",
+    "roleAr": "بناء واجهة الويب بالكامل بما فيها الدردشة الفورية، ومعظم لوحة الإدارة."
+  },
+  {
+    "id": "coach-amr",
+    "featured": false,
+    "type": "client",
+    "year": "",
+    "titleEn": "Coach Amr Fitness Platform",
+    "titleAr": "منصة الكابتن عمرو للياقة",
+    "shortDescEn": "A gym and personal-training platform: a React coach dashboard, a Flutter trainee app, a Laravel API and a 3D landing page.",
+    "shortDescAr": "منصة نادٍ رياضي وتدريب شخصي: لوحة تحكم للمدرب بـ React، وتطبيق Flutter للمتدربين، وواجهة Laravel، وصفحة تعريفية ثلاثية الأبعاد.",
+    "detailedDescEn": "The coach manages trainees and subscriptions and builds workout programmes (programmes → days → exercises → sets and reps) from an exercise library with photos and demo videos. Diet programmes include meals with glycemic index values and calorie targets. Trainees follow their plans, log sets and upload progress photos in the mobile app. Everything is bilingual (English and Arabic), and the landing page features an interactive Three.js model.",
+    "detailedDescAr": "يدير المدرب المتدربين والاشتراكات ويبني برامج التمرين (برامج ← أيام ← تمارين ← مجموعات وتكرارات) من مكتبة تمارين بالصور ومقاطع الشرح، إضافة إلى برامج غذائية بوجبات مع المؤشر الجلايسيمي وأهداف السعرات. ويتابع المتدرب خطته ويسجّل مجموعاته ويرفع صور تقدّمه عبر التطبيق. كل شيء بالعربية والإنجليزية، مع صفحة تعريفية تتضمن مجسماً تفاعلياً بـ Three.js.",
+    "highlightsEn": [
+      "Coach dashboard in React with workout and diet builders",
+      "Exercise library with photo and video uploads",
+      "Bilingual landing page with an interactive Three.js model"
+    ],
+    "highlightsAr": [
+      "لوحة تحكم المدرب بـ React مع منشئ برامج التمرين والتغذية",
+      "مكتبة تمارين مع رفع الصور ومقاطع الفيديو",
+      "صفحة تعريفية ثنائية اللغة مع مجسم تفاعلي بـ Three.js"
+    ],
+    "tags": [
+      "React",
+      "Laravel",
+      "Mobile"
+    ],
+    "tech": [
+      "React 19",
+      "React Router",
+      "i18next",
+      "Three.js",
+      "Laravel 12",
+      "Sanctum",
+      "Flutter"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Built the landing page (SPA) and the coach dashboard frontend.",
+    "roleAr": "بناء الصفحة التعريفية (SPA) وواجهة لوحة تحكم المدرب."
+  },
+  {
+    "id": "mafia",
+    "featured": false,
+    "type": "personal",
+    "year": "2026",
+    "titleEn": "Mafia: Real-Time Multiplayer Game",
+    "titleAr": "Mafia: لعبة جماعية فورية",
+    "shortDescEn": "An online multiplayer Mafia game: a Flutter app on top of a Node.js + Socket.IO server, with secret roles and timed night and day phases.",
+    "shortDescAr": "لعبة Mafia جماعية عبر الإنترنت: تطبيق Flutter مع خادم Node.js وSocket.IO، بأدوار سرية ومراحل ليل ونهار مؤقتة.",
+    "detailedDescEn": "Friends join a room with a 4-letter code and are secretly dealt roles: Mafia, Doctor, Detective or Villager. At night (30 s) the Mafia vote on a victim, the Doctor protects someone (never the same person twice in a row), and the Detective investigates a suspect. During the day (60 s) everyone votes. The server is the single source of truth: it enforces the rules and timers and sends each player a separate state in which other roles stay hidden, so a modified client cannot cheat. A bot harness can fill a room so a full match can be tested alone.",
+    "detailedDescAr": "ينضم الأصدقاء إلى غرفة برمز من 4 أحرف ويحصل كل منهم سراً على دور: مافيا، طبيب، محقق أو مواطن. في الليل (30 ثانية) تصوّت المافيا على ضحية، ويحمي الطبيب أحد اللاعبين (ولا يحمي الشخص نفسه مرتين متتاليتين)، ويحقق المحقق مع مشتبه به. وفي النهار (60 ثانية) يصوّت الجميع. الخادم هو المرجع الوحيد: يطبّق القواعد والمؤقتات ويرسل لكل لاعب حالة خاصة تبقى فيها أدوار الآخرين مخفية، فلا يمكن الغش بتعديل التطبيق. وتسمح أداة بوتات بملء الغرفة لاختبار مباراة كاملة بشكل فردي.",
+    "highlightsEn": [
+      "Authoritative Socket.IO server with a separate state view per player",
+      "Server-side phase timers and rule enforcement",
+      "Flutter UI with role-reveal cards, night actions and voting",
+      "Scripted bot clients for testing"
+    ],
+    "highlightsAr": [
+      "خادم Socket.IO مرجعي يرسل حالة مستقلة لكل لاعب",
+      "مؤقتات المراحل وتطبيق القواعد على الخادم",
+      "واجهة Flutter مع بطاقات كشف الأدوار وإجراءات الليل والتصويت",
+      "بوتات مبرمجة للاختبار"
+    ],
+    "roleEn": "Solo project: game design, server and mobile app.",
+    "roleAr": "مشروع فردي: تصميم اللعبة والخادم وتطبيق الجوال.",
+    "tags": [
+      "Mobile",
+      "Game"
+    ],
+    "tech": [
+      "Flutter",
+      "Dart",
+      "Node.js",
+      "Express",
+      "Socket.IO"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "softsim",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "SoftSim: Soft-Body Physics Sandbox",
+    "titleAr": "SoftSim: محاكاة فيزياء الأجسام المرنة",
+    "shortDescEn": "A custom Unity physics engine for soft and rigid bodies: octree mass-spring networks, GJK/EPA collisions, Burst jobs and GPU mesh deformation.",
+    "shortDescAr": "محرك فيزيائي مخصص في Unity للأجسام المرنة والصلبة: شبكات كتل ونوابض مبنية بـ Octree، وتصادمات GJK/EPA، ومعالجة متوازية عبر Burst، وتشويه الشبكات على GPU.",
+    "detailedDescEn": "Any mesh, including OBJ files imported at runtime, is filled with mass points connected by two layers of springs, so objects can squash and bounce like a pillow or stay solid like a barrel. Collisions use spatial hashing followed by a full GJK + EPA implementation, with restitution and friction. The visible mesh follows the simulated points on the CPU or through a compute shader, and the physics runs in parallel C# jobs compiled with Burst.",
+    "detailedDescAr": "تُملأ أي شبكة ثلاثية الأبعاد، بما فيها ملفات OBJ المستوردة أثناء التشغيل، بنقاط كتلة متصلة بطبقتين من النوابض، فتنضغط الأجسام وترتد كالوسادة أو تبقى صلبة كالبرميل. تستخدم التصادمات تجزئة مكانية ثم تطبيقاً كاملاً لخوارزميتي GJK وEPA مع الارتداد والاحتكاك. وتتبع الشبكة المرئية النقاط المحاكاة على المعالج أو عبر Compute Shader، بينما تعمل الفيزياء في مهام C# متوازية مترجمة بـ Burst.",
+    "highlightsEn": [
+      "Octree-generated mass-spring bodies",
+      "GJK / EPA narrow-phase collision detection",
+      "Burst-compiled parallel jobs and a GPU compute shader"
+    ],
+    "highlightsAr": [
+      "أجسام كتل ونوابض مولّدة بـ Octree",
+      "كشف دقيق للتصادم بخوارزميتي GJK / EPA",
+      "مهام متوازية مترجمة بـ Burst وCompute Shader على GPU"
+    ],
+    "tags": [
+      "Simulation",
+      "Game"
+    ],
+    "tech": [
+      "Unity 6",
+      "C#",
+      "Job System",
+      "Burst",
+      "HLSL"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "medicine-warehouse",
+    "featured": false,
+    "type": "team",
+    "year": "",
+    "titleEn": "Medicine Warehouse",
+    "titleAr": "مستودع الأدوية",
+    "shortDescEn": "A B2B ordering system: pharmacists order from a Flutter app, and the warehouse manages stock, orders and reports on the web.",
+    "shortDescAr": "نظام طلبات بين المستودع والصيدليات: يطلب الصيادلة عبر تطبيق Flutter، ويدير المستودع المخزون والطلبات والتقارير عبر الويب.",
+    "detailedDescEn": "Pharmacists browse the catalogue by category, search, add favourites, fill a cart and track their orders. The warehouse adds medicines (scientific and brand names, quantities, expiry dates, images), updates order and payment status, and runs date-range reports on orders and expiring stock. Both the mobile app and the web dashboard come from one Flutter codebase, connected to a Laravel API, with bilingual content.",
+    "detailedDescAr": "يتصفح الصيادلة الكتالوج حسب الفئات، ويبحثون، ويضيفون إلى المفضلة، ويملؤون السلة ويتابعون طلباتهم. ويضيف المستودع الأدوية (الاسم العلمي والتجاري، الكميات، تاريخ الانتهاء، الصورة)، ويحدّث حالة الطلبات والدفع، ويستخرج تقارير الطلبات والأدوية القريبة من الانتهاء حسب الفترة. التطبيق ولوحة الويب من شيفرة Flutter واحدة مرتبطة بواجهة Laravel، مع محتوى ثنائي اللغة.",
+    "highlightsEn": [
+      "One Flutter codebase for mobile and web",
+      "Cart, ordering and order tracking",
+      "Expiry and order reports"
+    ],
+    "highlightsAr": [
+      "شيفرة Flutter واحدة للجوال والويب",
+      "سلة الطلبات وإنشاؤها وتتبعها",
+      "تقارير الطلبات والأدوية القريبة من الانتهاء"
+    ],
+    "tags": [
+      "Laravel",
+      "Mobile"
+    ],
+    "tech": [
+      "Flutter",
+      "GetX",
+      "Laravel 10",
+      "Sanctum",
+      "MySQL"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "One of two developers on the Laravel backend. This was my first project, before I specialised in frontend.",
+    "roleAr": "أحد مطوّرَين اثنين للواجهة الخلفية بـ Laravel، وكان أول مشاريعي قبل التخصص في الواجهات الأمامية."
+  },
+  {
+    "id": "submarine",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Submarine Physics Simulator",
+    "titleAr": "محاكي فيزياء الغواصة",
+    "shortDescEn": "A browser-based 3D submarine simulation with real hydrodynamic forces: buoyancy, drag and thrust.",
+    "shortDescAr": "محاكاة ثلاثية الأبعاد لغواصة تعمل في المتصفح، بقوى هيدروديناميكية حقيقية: الطفو والسحب والدفع.",
+    "detailedDescEn": "A hand-written physics engine applies Newton's second law to weight, Archimedes' buoyancy, quadratic drag and propeller thrust. Dive, Float and Stay modes change the ballast mass. A live control panel adjusts every physical parameter, from mass and drag coefficient to water density. The scene is built with Three.js and includes a shader-animated ocean, cubemaps and icebergs.",
+    "detailedDescAr": "محرك فيزيائي مكتوب يدوياً يطبّق قانون نيوتن الثاني على الوزن وطفو أرخميدس والسحب التربيعي ودفع المروحة، مع أوضاع غوص وطفو وثبات تغيّر كتلة الصابورة. تتيح لوحة تحكم حية تعديل كل المعاملات الفيزيائية من الكتلة ومعامل السحب إلى كثافة الماء، ضمن مشهد Three.js يضم محيطاً متحركاً بالـ Shaders وصور سماء وجبالاً جليدية.",
+    "highlightsEn": [
+      "Weight, buoyancy, drag and thrust forces integrated over time",
+      "Live parameter tuning with dat.GUI",
+      "Ocean surface animated by a custom shader"
+    ],
+    "highlightsAr": [
+      "دمج قوى الوزن والطفو والسحب والدفع عبر الزمن",
+      "ضبط المعاملات مباشرة عبر dat.GUI",
+      "سطح محيط متحرك بـ Shader مخصص"
+    ],
+    "tags": [
+      "Simulation"
+    ],
+    "tech": [
+      "JavaScript",
+      "Three.js",
+      "WebGL",
+      "Vite",
+      "dat.GUI"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "al-aqsa-3d",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Al-Aqsa Mosque 3D Explorer",
+    "titleAr": "جولة ثلاثية الأبعاد في المسجد الأقصى",
+    "shortDescEn": "A walkable real-time 3D reconstruction of the Al-Aqsa Mosque compound, built from scratch in modern OpenGL.",
+    "shortDescAr": "إعادة بناء ثلاثية الأبعاد لمجمّع المسجد الأقصى يمكن التجول فيها في الوقت الحقيقي، مبنية من الصفر باستخدام OpenGL.",
+    "detailedDescEn": "A hand-written OpenGL 4.6 renderer. Each landmark (the Dome of the Rock, the Qibli Mosque inside and out, minarets, walls) is a C++ class that builds its own geometry. The scene adds imported models, a moving sun for a day/night cycle, Phong lighting, a skybox, first- and third-person cameras, and spatial footstep audio.",
+    "detailedDescAr": "محرك عرض مكتوب يدوياً بـ OpenGL 4.6. كل معلم (قبة الصخرة، المسجد القبلي من الداخل والخارج، المآذن، الأسوار) صنف C++ يبني هندسته بنفسه، إضافة إلى نماذج مستوردة وشمس متحركة لدورة الليل والنهار وإضاءة Phong وسماء محيطة وكاميرا بمنظور الشخص الأول والثالث وأصوات خطوات.",
+    "highlightsEn": [
+      "Architecture generated in code",
+      "Day/night lighting and a skybox",
+      "First- and third-person exploration"
+    ],
+    "highlightsAr": [
+      "مبانٍ مولّدة برمجياً",
+      "إضاءة الليل والنهار وسماء محيطة",
+      "تجول بمنظور الشخص الأول والثالث"
+    ],
+    "tags": [
+      "Simulation"
+    ],
+    "tech": [
+      "C++",
+      "OpenGL 4.6",
+      "GLSL",
+      "GLFW",
+      "GLM",
+      "irrKlang"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "youbot",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Sensor-Driven youBot Robots (Webots)",
+    "titleAr": "روبوتات youBot تتخذ قراراتها بالحساسات (Webots)",
+    "shortDescEn": "Two KUKA youBot robots in Webots that perceive the arena through cameras, GPS, a compass and gripper sensors, and use those readings to decide their next action as they sort coloured cubes together.",
+    "shortDescAr": "روبوتا KUKA youBot في Webots يدركان الساحة عبر الكاميرات والـ GPS والبوصلة وحساسات القابض، ويستخدمان هذه القراءات لتحديد خطوتهما التالية أثناء فرز المكعبات الملونة معاً.",
+    "detailedDescEn": "A robot simulation in Webots where every move is decided from sensor readings rather than hard-coded paths. Each KUKA youBot drives over a strip of coloured floor tiles and reads it with a downward camera, decoding RGB values into a colour sequence that becomes its task list. Robot 1 reads 8 tiles (4 for the pick order, 4 for the drop order), then picks up the cubes and places them. Robot 2 reads its own strip, goes to each handoff tile, takes the cube there, carries it to the tile that matches its colour, and confirms the target with its camera before releasing.\n\nThe robots localise themselves with GPS and a compass, and steer with omnidirectional mecanum wheels using staged alignment and in-place turns. The 5-DOF arm and gripper are controlled in joint space, and the finger position sensors confirm that a cube is really held. If a grasp fails, the robot reopens the gripper and tries again. Two supervisor controllers share cube and tile positions over radio (emitters and receivers) and tell one robot to wait when the other is using a tile it needs.",
+    "detailedDescAr": "محاكاة روبوتية في Webots تُتخذ فيها كل حركة بناءً على قراءات الحساسات بدلاً من مسارات مبرمجة مسبقاً. يمر كل روبوت KUKA youBot فوق شريط من البلاطات الملونة ويقرؤه بكاميرا موجهة للأسفل، فيحوّل قيم RGB إلى تسلسل ألوان يصبح قائمة مهامه. يقرأ الروبوت الأول 8 بلاطات (4 لترتيب الالتقاط و4 لترتيب الوضع)، ثم يلتقط المكعبات ويضعها. ويقرأ الروبوت الثاني شريطه الخاص، ويتوجه إلى كل بلاطة تسليم، فيأخذ المكعب منها وينقله إلى البلاطة المطابقة للونه، ويتحقق من الهدف بالكاميرا قبل إفلاته.\n\nيحدد الروبوتان موقعهما بالـ GPS والبوصلة، ويتحركان بعجلات Mecanum متعددة الاتجاهات مع محاذاة على مراحل ودوران في المكان. وتُدار الذراع ذات الخمس درجات حرية والقابض في فضاء المفاصل، بينما تؤكد حساسات أصابع القابض أن المكعب مُمسك فعلاً. وإذا فشل الإمساك يعيد الروبوت فتح القابض ويحاول مجدداً. ويتبادل متحكمان مشرفان مواقع المكعبات والبلاطات عبر الراديو (Emitters وReceivers)، ويطلبان من أحد الروبوتين الانتظار حين يستخدم الآخر بلاطة يحتاجها.",
+    "highlightsEn": [
+      "Downward camera with RGB colour decoding to read the task code from the floor",
+      "GPS and compass localisation driving mecanum-wheel navigation",
+      "Grasps verified with gripper finger sensors, with automatic retries",
+      "Camera check of the target tile before each drop",
+      "Supervisor coordination between the two robots over radio channels"
+    ],
+    "highlightsAr": [
+      "كاميرا موجهة للأسفل تفك ألوان RGB لقراءة شيفرة المهام من الأرض",
+      "تحديد الموقع بالـ GPS والبوصلة لتوجيه الحركة بعجلات Mecanum",
+      "التحقق من الإمساك بحساسات أصابع القابض مع إعادة المحاولة تلقائياً",
+      "التحقق من بلاطة الهدف بالكاميرا قبل كل إفلات",
+      "تنسيق بين الروبوتين عبر المشرفين وقنوات الراديو"
+    ],
+    "tags": [
+      "AI",
+      "Simulation"
+    ],
+    "tech": [
+      "Python",
+      "Webots",
+      "KUKA youBot",
+      "Camera",
+      "GPS",
+      "Compass",
+      "Position Sensors",
+      "Emitter / Receiver",
+      "Supervisor API"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Chose the robot, added all the required components and sensors, set up the Webots environment, and developed a large part of the control solution.",
+    "roleAr": "اختيار الروبوت وإضافة جميع المكونات والحساسات المطلوبة وتجهيز بيئة Webots، وتطوير جزء كبير من حل التحكم."
+  },
+  {
+    "id": "huffzip",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "HuffZip: Multithreaded File Compressor",
+    "titleAr": "HuffZip: ضاغط ملفات متعدد المسارات",
+    "shortDescEn": "A desktop archiver written from scratch that compresses files and whole folders with Huffman or Shannon-Fano coding, runs in the background, and supports AES password protection.",
+    "shortDescAr": "برنامج أرشفة مكتبي مكتوب من الصفر يضغط الملفات والمجلدات كاملة بترميز Huffman أو Shannon-Fano، ويعمل في الخلفية، ويدعم الحماية بكلمة مرور AES.",
+    "detailedDescEn": "Both entropy coders are implemented by hand. Huffman builds its tree from a priority queue, and Shannon-Fano splits the frequency table recursively. Custom BitWriter and BitReader classes pack the variable-length codes into a custom archive format that keeps relative folder paths, so you can list an archive and extract only the files you choose.\n\nCompression runs on background tasks with async/await, progress reporting, pause and resume (ManualResetEventSlim) and cancellation tokens, so the UI never freezes, even on large video and audio files. Archives can be encrypted with AES, using a key derived through PBKDF2, and the app adds a right-click option to Windows Explorer.",
+    "detailedDescAr": "خوارزميتا الترميز مكتوبتان يدوياً: يبني Huffman شجرته من طابور أولويات، ويقسم Shannon-Fano جدول التكرارات تقسيماً عودياً. وتحزم صنفا BitWriter وBitReader المخصصان الرموز متغيرة الطول في صيغة أرشيف خاصة تحفظ المسارات النسبية للمجلدات، فيمكن عرض محتوى الأرشيف واستخراج الملفات المختارة فقط.\n\nيعمل الضغط في مهام خلفية باستخدام async/await مع عرض التقدم والإيقاف المؤقت والاستئناف (ManualResetEventSlim) والإلغاء (Cancellation Tokens)، فلا تتجمد الواجهة حتى مع ملفات الفيديو والصوت الكبيرة. ويمكن تشفير الأرشيف بـ AES بمفتاح مشتق عبر PBKDF2، ويضيف البرنامج خياراً إلى قائمة النقر الأيمن في مستكشف Windows.",
+    "highlightsEn": [
+      "Huffman and Shannon-Fano coders implemented from scratch",
+      "Bit-level I/O and a custom multi-file archive format",
+      "Background tasks with progress, pause/resume and cancellation",
+      "AES encryption with PBKDF2 key derivation"
+    ],
+    "highlightsAr": [
+      "ترميز Huffman وShannon-Fano مكتوبان من الصفر",
+      "قراءة وكتابة على مستوى البت وصيغة أرشيف متعددة الملفات",
+      "مهام خلفية مع عرض التقدم والإيقاف والاستئناف والإلغاء",
+      "تشفير AES مع اشتقاق المفتاح عبر PBKDF2"
+    ],
+    "tags": [
+      "Algorithms"
+    ],
+    "tech": [
+      "C#",
+      ".NET 6",
+      "Windows Forms",
+      "async/await",
+      "AES",
+      "PBKDF2"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "parallel-distribution",
+    "featured": false,
+    "type": "course",
+    "year": "2025",
+    "titleEn": "Parallel Medicine Distribution (PVM & MPI)",
+    "titleAr": "توزيع الأدوية بالحوسبة التفرعية (PVM وMPI)",
+    "shortDescEn": "A hierarchical parallel simulation of medicine distribution across Syria's 14 governorates, built twice: with PVM on a 2-core Windows XP setup and with MPI.NET on a 16-core modern Windows machine, each benchmarked against a sequential version.",
+    "shortDescAr": "محاكاة تفرعية هرمية لتوزيع الأدوية على 14 محافظة سورية، بُنيت مرتين: باستخدام PVM على بيئة Windows XP بنواتين، وباستخدام MPI.NET على جهاز Windows حديث بـ 16 نواة، مع مقارنة كل منهما بنسخة تسلسلية.",
+    "detailedDescEn": "The work is organised as a three-level process tree. A supervisor process starts one distribution centre per governorate, and each centre starts its own distributors, who calculate how long they need to deliver to their pharmacies and clinics. Each centre reports its slowest distributor (the critical path) back to the supervisor.\n\nThe work was done as two small projects on different hardware. The PVM version, written in C, runs on Windows XP across 2 cores and spawns processes dynamically with pvm_spawn and passes packed messages between them. The MPI.NET version, written in C#, runs on a modern Windows machine across 16 cores and starts every process at once and assigns roles by rank: rank 0 is the supervisor, ranks 1–14 are the centres, and the rest are distributors. Work is split evenly across distributors, with any remainder going to the first ones, and both versions are timed against sequential baselines to measure the speed-up.",
+    "detailedDescAr": "يُنظَّم العمل في شجرة عمليات من ثلاثة مستويات. تُطلق عملية مشرفة مركز توزيع لكل محافظة، ويُطلق كل مركز موزعيه، فيحسب كل موزع الزمن اللازم للتوزيع على صيدلياته وعياداته. ثم يرسل كل مركز زمن أبطأ موزّع لديه (المسار الحرج) إلى المشرف.\n\nأُنجز العمل كمشروعين صغيرين على عتادين مختلفين: نسخة PVM بلغة C تعمل على Windows XP بنواتين وتُنشئ العمليات ديناميكياً عبر pvm_spawn وتتبادل بينها رسائل محزومة. أما نسخة MPI.NET بلغة C# فتعمل على جهاز Windows حديث بـ 16 نواة وتشغّل جميع العمليات دفعة واحدة وتوزّع الأدوار حسب الرتبة: الرتبة 0 للمشرف، والرتب 1–14 للمراكز، والباقي للموزعين. وتوزَّع المهام بالتساوي على الموزعين مع إسناد الباقي لأوائلهم، وتُقاس النسختان مقابل نسخ تسلسلية لحساب التسريع.",
+    "highlightsEn": [
+      "Three-level process hierarchy: supervisor, centres, distributors",
+      "PVM version in C on Windows XP (2 cores): dynamic process spawning and message passing",
+      "MPI.NET version in C# on modern Windows (16 cores): rank-based roles and point-to-point messaging",
+      "Static load balancing and speed-up measured against sequential code"
+    ],
+    "highlightsAr": [
+      "هرمية عمليات من ثلاثة مستويات: مشرف ومراكز وموزعون",
+      "نسخة PVM بلغة C على Windows XP (نواتان): إنشاء ديناميكي للعمليات وتمرير الرسائل",
+      "نسخة MPI.NET بلغة C# على Windows حديث (16 نواة): أدوار حسب الرتبة ورسائل نقطة لنقطة",
+      "موازنة حمل ثابتة وقياس التسريع مقارنة بالشيفرة التسلسلية"
+    ],
+    "tags": [
+      "Algorithms"
+    ],
+    "tech": [
+      "C",
+      "C#",
+      "PVM",
+      "MPI.NET"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": "",
+    "roleEn": "Contributed to both versions: the PVM version on Windows XP (2 cores) and the MPI.NET version on modern Windows (16 cores).",
+    "roleAr": "المساهمة في النسختين: نسخة PVM على Windows XP (نواتان) ونسخة MPI.NET على Windows حديث (16 نواة)."
+  },
+  {
+    "id": "logic-magnets",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Logic Magnets: AI Search Solver",
+    "titleAr": "Logic Magnets: حل الألغاز بخوارزميات البحث",
+    "shortDescEn": "The Logic Magnets puzzle with 25 levels, solved automatically by five AI search algorithms: BFS, DFS, UCS, Hill Climbing and A*.",
+    "shortDescAr": "لغز Logic Magnets بـ 25 مرحلة، تحلّه تلقائياً خمس خوارزميات بحث: BFS وDFS وUCS وHill Climbing وA*.",
+    "detailedDescEn": "A playable version of the Logic Magnets puzzle. A purple magnet pushes pieces away and a red magnet pulls them in, and the goal is to cover every target cell within a move budget. Each move produces a new immutable board state with equality and ordering defined, so states can be de-duplicated and stored in priority queues.\n\nFive solvers explore the state space: BFS (shortest solution), DFS (limited by the move budget), Uniform-Cost Search, Hill Climbing, and A* with a Manhattan-distance heuristic from each iron piece to its nearest target. The solution path is then printed back from the goal state.",
+    "detailedDescAr": "نسخة قابلة للعب من لغز Logic Magnets: المغناطيس البنفسجي يدفع القطع بعيداً والأحمر يجذبها، والهدف تغطية كل الخانات المستهدفة ضمن عدد محدود من الحركات. كل حركة تنتج حالة رقعة جديدة غير قابلة للتعديل مع تعريف للمساواة والترتيب، لتجنّب تكرار الحالات وتخزينها في طوابير الأولوية.\n\nتستكشف خمس خوارزميات فضاء الحالات: BFS (أقصر حل)، وDFS (مقيدة بعدد الحركات)، والبحث بالكلفة الموحدة UCS، وHill Climbing، وA* مع دالة تقدير بمسافة مانهاتن من كل قطعة حديدية إلى أقرب هدف. ثم يُطبع مسار الحل رجوعاً من حالة الهدف.",
+    "highlightsEn": [
+      "Immutable state modelling with hashing and ordering",
+      "BFS, DFS, UCS, Hill Climbing and A* solvers",
+      "Manhattan-distance heuristic for A*",
+      "25 hand-built levels"
+    ],
+    "highlightsAr": [
+      "نمذجة حالات غير قابلة للتعديل مع المقارنة والترتيب",
+      "خوارزميات BFS وDFS وUCS وHill Climbing وA*",
+      "دالة تقدير بمسافة مانهاتن لخوارزمية A*",
+      "25 مرحلة مصممة يدوياً"
+    ],
+    "roleEn": "Individual project.",
+    "roleAr": "مشروع فردي.",
+    "tags": [
+      "AI",
+      "Algorithms",
+      "Game"
+    ],
+    "tech": [
+      "Python",
+      "heapq"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "ludo-ai",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Ludo AI: Expectimax Player",
+    "titleAr": "لودو بالذكاء الاصطناعي: خوارزمية Expectimax",
+    "shortDescEn": "A complete Ludo rules engine with a computer opponent that plans under dice uncertainty using Expectimax search.",
+    "shortDescAr": "محرك قواعد كامل للعبة لودو مع خصم حاسوبي يخطط في ظل عشوائية النرد باستخدام بحث Expectimax.",
+    "detailedDescEn": "Ludo turns depend on dice rolls, so plain Minimax does not fit. The AI uses Expectimax, which adds chance nodes that average over all six dice values between the player's (MAX) and the opponent's (MIN) layers. It generates every possible successor state for each roll down to a configurable depth.\n\nThe rules engine handles entering the board on a six, moving around the shared track and into the home stretch, capturing pieces, protected squares and win detection. Leaf states are scored on distance travelled, pieces on safe squares and pieces still in base.",
+    "detailedDescAr": "يعتمد كل دور في لودو على رمية النرد، لذا لا تناسبه خوارزمية Minimax العادية. يستخدم الذكاء الاصطناعي Expectimax التي تضيف عقد احتمال تحسب المتوسط على قيم النرد الست بين طبقتي اللاعب (MAX) والخصم (MIN)، وتولّد كل الحالات اللاحقة الممكنة لكل رمية حتى عمق قابل للضبط.\n\nيدير محرك القواعد الدخول إلى الرقعة بالرقم ستة، والتحرك على المسار المشترك ثم إلى طريق المنزل، وأسر القطع، والمربعات المحمية، واكتشاف الفوز. وتُقيَّم الحالات الطرفية حسب المسافة المقطوعة والقطع على المربعات الآمنة والقطع الباقية في القاعدة.",
+    "highlightsEn": [
+      "Expectimax search with chance nodes for the dice",
+      "Generation of every successor state per roll",
+      "Heuristic evaluation of board states"
+    ],
+    "highlightsAr": [
+      "بحث Expectimax مع عقد احتمال للنرد",
+      "توليد جميع الحالات اللاحقة لكل رمية",
+      "تقييم تقديري لحالات الرقعة"
+    ],
+    "tags": [
+      "AI",
+      "Algorithms",
+      "Game"
+    ],
+    "tech": [
+      "Python"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "lisp-compiler",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Lisp Compiler Front-End",
+    "titleAr": "الواجهة الأمامية لمترجم Lisp",
+    "shortDescEn": "Hand-written ANTLR4 grammars for a large subset of Common Lisp, a visitor that builds an abstract syntax tree, and Graphviz export of both trees to PDF.",
+    "shortDescAr": "قواعد ANTLR4 مكتوبة يدوياً لجزء كبير من لغة Common Lisp، مع Visitor يبني شجرة التركيب المجردة، وتصدير الشجرتين إلى PDF عبر Graphviz.",
+    "detailedDescEn": "The front end of a compiler. Custom lexer and parser grammars cover definitions (defun, defvar, defmacro, defclass, lambda), bindings (let, let*, setq, setf), control flow (if, cond, case, loop, do, return-from, throw/catch), logic and arithmetic, and I/O and format forms. A visitor turns the parse tree into a cleaner AST, and both trees are rendered as PDFs so each stage of compilation can be inspected.",
+    "detailedDescAr": "الواجهة الأمامية لمترجم. تغطي قواعد المحلل اللفظي والنحوي المخصصة التعريفات (defun وdefvar وdefmacro وdefclass وlambda)، والربط (let وlet* وsetq وsetf)، والتحكم بالتدفق (if وcond وcase وloop وdo وreturn-from وthrow/catch)، والمنطق والحساب، والإدخال والإخراج وformat. ويحوّل Visitor شجرة التحليل إلى شجرة تركيب مجردة أنظف، وتُرسم الشجرتان كملفات PDF لفحص كل مرحلة من مراحل الترجمة.",
+    "highlightsEn": [
+      "ANTLR4 lexer and parser grammars written by hand",
+      "Visitor-based AST construction",
+      "Parse tree and AST visualised with Graphviz"
+    ],
+    "highlightsAr": [
+      "قواعد ANTLR4 للمحلل اللفظي والنحوي مكتوبة يدوياً",
+      "بناء شجرة التركيب المجردة عبر Visitor",
+      "رسم شجرة التحليل وشجرة التركيب عبر Graphviz"
+    ],
+    "tags": [
+      "Algorithms"
+    ],
+    "tech": [
+      "Python",
+      "ANTLR4",
+      "Graphviz"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "blob-wars",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Blob Wars",
+    "titleAr": "Blob Wars: لعبة السيطرة على الرقعة",
+    "shortDescEn": "An Ataxx-style territory-capture board game in Pygame, with clone and jump moves, neighbour conversion and full legal-move generation.",
+    "shortDescAr": "لعبة رقعة للسيطرة على المساحة على نمط Ataxx بـ Pygame، مع حركات الاستنساخ والقفز وتحويل القطع المجاورة وتوليد كامل للحركات القانونية.",
+    "detailedDescEn": "An 8×8 strategy game with blocked centre squares. A blob either clones into an adjacent square or jumps two squares away, and every enemy blob next to where it lands switches to your colour. The engine generates all legal moves for any board state and detects wins and draws, which is the foundation a search-based opponent such as Minimax needs. The current computer opponent picks a random legal move.",
+    "detailedDescAr": "لعبة استراتيجية على رقعة 8×8 مع مربعات وسطى مغلقة. تستنسخ القطعة نفسها إلى مربع مجاور أو تقفز مربعين، ويتحول كل خصم مجاور لمكان هبوطها إلى لونك. يولّد المحرك جميع الحركات القانونية لأي حالة ويكتشف الفوز والتعادل، وهي الأساس الذي يحتاجه خصم قائم على البحث مثل Minimax. أما الخصم الحاسوبي الحالي فيختار حركة قانونية عشوائية.",
+    "highlightsEn": [
+      "Clone and jump moves with conversion of all 8 neighbours",
+      "Legal-move generation for any board state",
+      "Sprite-based Pygame interface"
+    ],
+    "highlightsAr": [
+      "حركات الاستنساخ والقفز مع تحويل الجيران الثمانية",
+      "توليد الحركات القانونية لأي حالة",
+      "واجهة Pygame بالرسوم"
+    ],
+    "tags": [
+      "Game",
+      "Algorithms"
+    ],
+    "tech": [
+      "Python",
+      "Pygame"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "spot-the-difference",
+    "featured": false,
+    "type": "course",
+    "year": "",
+    "titleEn": "Spot the Difference",
+    "titleAr": "اكتشف الفرق",
+    "shortDescEn": "A Windows Forms game that finds the differences between two images automatically by comparing pixels, with timed and survival modes.",
+    "shortDescAr": "لعبة Windows Forms تكتشف الفروق بين صورتين تلقائياً بمقارنة البكسلات، مع وضعي اللعب المؤقت والبقاء.",
+    "detailedDescEn": "The differences are not marked by hand. The game compares the two images pixel by pixel with a colour tolerance, then merges neighbouring and overlapping differing pixels into difference regions, so any pair of images becomes a playable level. Players click on the regions they spot, either before a countdown ends (60, 45 or 30 seconds, depending on difficulty) or within a limited number of clicks, with sound effects and win and lose screens.",
+    "detailedDescAr": "لا تُحدَّد الفروق يدوياً: تقارن اللعبة الصورتين بكسلاً ببكسل ضمن حد تسامح لوني، ثم تدمج البكسلات المختلفة المتجاورة والمتداخلة في مناطق فروق، فتصبح أي صورتين مرحلة قابلة للعب. ينقر اللاعب على المناطق التي يكتشفها قبل انتهاء الوقت (60 أو 45 أو 30 ثانية حسب الصعوبة) أو ضمن عدد محدود من النقرات، مع مؤثرات صوتية وشاشات للفوز والخسارة.",
+    "highlightsEn": [
+      "Automatic difference detection by pixel comparison",
+      "Merging of adjacent and overlapping regions",
+      "Timed and survival modes with three difficulties"
+    ],
+    "highlightsAr": [
+      "اكتشاف تلقائي للفروق بمقارنة البكسلات",
+      "دمج المناطق المتجاورة والمتداخلة",
+      "وضعا اللعب المؤقت والبقاء بثلاث مستويات صعوبة"
+    ],
+    "tags": [
+      "Game",
+      "Algorithms"
+    ],
+    "tech": [
+      "C#",
+      "Windows Forms",
+      "System.Drawing"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "touch-wheel",
+    "featured": false,
+    "type": "personal",
+    "year": "",
+    "titleEn": "Decision Wheel Minigame",
+    "titleAr": "لعبة عجلة القرار",
+    "shortDescEn": "A simple browser minigame: type in your options, spin the wheel, and let it decide.",
+    "shortDescAr": "لعبة صغيرة في المتصفح: أدخل الخيارات التي تريدها، أدر العجلة، ودعها تقرر عنك.",
+    "detailedDescEn": "A small decision-wheel minigame written as a single HTML file. Type in the options you want, spin the wheel, and it lands on one of them. Nothing to install: it opens straight in the browser.",
+    "detailedDescAr": "لعبة عجلة قرار صغيرة مكتوبة في ملف HTML واحد. أدخل الخيارات التي تريدها، أدر العجلة، فتتوقف على أحدها. لا تحتاج أي تثبيت، بل تُفتح مباشرة في المتصفح.",
+    "highlightsEn": [],
+    "highlightsAr": [],
+    "tags": [
+      "Game"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
+  },
+  {
+    "id": "damascus-mascot",
+    "featured": false,
+    "type": "personal",
+    "year": "",
+    "titleEn": "Damascus Coin Mascot",
+    "titleAr": "شخصية العملة الدمشقية",
+    "shortDescEn": "A standalone mascot character designed in Figma, holding a 1930s Damascus Syrian coin.",
+    "shortDescAr": "تصميم شخصية (Mascot) مستقل في Figma، تحمل عملة سورية دمشقية من ثلاثينيات القرن الماضي.",
+    "detailedDescEn": "A personal character-design piece made in Figma, not tied to a client or project. The mascot holds a historically accurate 1930s Damascus Syrian coin, blending modern vector illustration with a nod to local history.",
+    "detailedDescAr": "عمل تصميمي شخصي في Figma، غير مرتبط بعميل أو مشروع. تحمل الشخصية تمثيلاً دقيقاً تاريخياً لعملة سورية دمشقية من ثلاثينيات القرن الماضي، مازجةً الرسم المتجهي الحديث بلمسة من التاريخ المحلي.",
+    "highlightsEn": [],
+    "highlightsAr": [],
+    "tags": [
+      "Design"
+    ],
+    "tech": [
+      "Figma"
+    ],
+    "mainImg": "",
+    "gallery": [],
+    "video": ""
   }
 ]
