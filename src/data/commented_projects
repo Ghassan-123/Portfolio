@@ -1,0 +1,49 @@
+{
+    "id": "qarsha",
+    "featured": true,
+    "type": "team",
+    "year": "2026",
+    "titleEn": "Qarsha: Daily-Deals Marketplace",
+    "titleAr": "قررشا: سوق العروض اليومية",
+    "shortDescEn": "A curated flash-deals marketplace for Syria (\"قررشا صح\", \"كل قرش بيفرق\") with limited-quantity offers, video reels, gifting, local e-wallet payments and seller settlement.",
+    "shortDescAr": "سوق عروض يومية مختارة في سوريا («قررشا صح»، «كل قرش بيفرق»): عروض بكميات محدودة، مقاطع فيديو قصيرة، إهداء الطلبات، دفع بالمحافظ الإلكترونية المحلية، وتسويات مالية للبائعين.",
+    "detailedDescEn": "Qarsha, built around the slogans \"قررشا صح\" and \"كل قرش بيفرق\", publishes time-limited, limited-quantity offers from partner sellers. Customers claim an offer, which reserves the stock while they check out, and then buy through the web storefront or the Flutter app. Each delivered order credits every seller their share minus a commission that depends on seller size, category and discount.\n\nThe backend is a carefully layered Laravel 12 modular monolith with concurrency-safe checkout, an order state machine, queued jobs for offer schedules, Meilisearch search and eCash / MTN Cash payments. Prices are stored in USD and shown in Syrian pounds.",
+    "detailedDescAr": "تنشر قررشا، المبنية حول شعاري «قررشا صح» و«كل قرش بيفرق»، عروضاً محدودة المدة والكمية من بائعين شركاء. يحجز العميل العرض فتُحجز الكمية له أثناء إتمام الشراء، ثم يشتري عبر متجر الويب أو تطبيق Flutter. وعند تسليم كل طلب يُضاف لكل بائع نصيبه بعد خصم عمولة تُحسب حسب حجم البائع والفئة والخصم.\n\nالواجهة الخلفية مبنية بـ Laravel 12 على شكل وحدات منظمة بطبقات واضحة، مع إتمام شراء آمن من التعارض، وآلة حالات للطلبات، ومهام مجدولة للعروض، وبحث Meilisearch، ودفع عبر eCash وMTN Cash. تُخزَّن الأسعار بالدولار وتُعرض بالليرة السورية.",
+    "highlightsEn": [
+      "Designed and built the React customer storefront",
+      "Deal pages, search, OTP login, addresses with maps, orders, reels and wishlist",
+      "Gifting flow, product comparison, and language, currency and theme settings",
+      "Full Arabic RTL support, connected to the Laravel API"
+    ],
+    "highlightsAr": [
+      "تصميم وتطوير متجر العملاء بـ React",
+      "صفحات العروض والبحث وتسجيل الدخول برمز OTP والعناوين على الخريطة والطلبات والمقاطع وقائمة الأمنيات",
+      "إهداء الطلبات ومقارنة المنتجات وإعدادات اللغة والعملة والمظهر",
+      "دعم كامل للعربية من اليمين لليسار وربط مع واجهة Laravel"
+    ],
+    "roleEn": "Built the React customer storefront end to end, in a 6-person team.",
+    "roleAr": "بناء متجر العملاء بـ React بالكامل، ضمن فريق من 6 أعضاء.",
+    "tags": [
+      "React",
+      "Laravel",
+      "Mobile"
+    ],
+    "tech": [
+      "React 19",
+      "Zustand",
+      "React Router",
+      "Leaflet",
+      "Swiper",
+      "Laravel 12",
+      "Meilisearch",
+      "Flutter"
+    ],
+    "mainImg": "/projects/qarsha/01.webp",
+    "gallery": [
+      "/projects/qarsha/01.webp",
+      "/projects/qarsha/02.webp",
+      "/projects/qarsha/03.webp",
+      "/projects/qarsha/04.webp"
+    ],
+    "video": ""
+  },

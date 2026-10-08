@@ -44,12 +44,12 @@
       "React",
       "Electron"
     ],
-    "mainImg": "/projects/matchlens/01.webp",
+    "mainImg": "projects/matchlens/01.webp",
     "gallery": [
-      "/projects/matchlens/01.webp",
-      "/projects/matchlens/02.webp",
-      "/projects/matchlens/03.webp",
-      "/projects/matchlens/04.webp"
+      "projects/matchlens/01.webp",
+      "projects/matchlens/02.webp",
+      "projects/matchlens/03.webp",
+      "projects/matchlens/04.webp"
     ],
     "video": "",
     "roleEn": "Built the homography (pixel-to-pitch mapping), worked on part of the tracking, and built the frontend: the dashboard the whole product is used through.",
@@ -96,61 +96,12 @@
       "Flutter",
       "i18next"
     ],
-    "mainImg": "/projects/adlify/01.webp",
+    "mainImg": "projects/adlify/01.webp",
     "gallery": [
-      "/projects/adlify/01.webp",
-      "/projects/adlify/02.webp",
-      "/projects/adlify/03.webp",
-      "/projects/adlify/04.webp"
-    ],
-    "video": ""
-  },
-  {
-    "id": "qarsha",
-    "featured": true,
-    "type": "team",
-    "year": "2026",
-    "titleEn": "Qarsha: Daily-Deals Marketplace",
-    "titleAr": "قررشا: سوق العروض اليومية",
-    "shortDescEn": "A curated flash-deals marketplace for Syria (\"قررشا صح\", \"كل قرش بيفرق\") with limited-quantity offers, video reels, gifting, local e-wallet payments and seller settlement.",
-    "shortDescAr": "سوق عروض يومية مختارة في سوريا («قررشا صح»، «كل قرش بيفرق»): عروض بكميات محدودة، مقاطع فيديو قصيرة، إهداء الطلبات، دفع بالمحافظ الإلكترونية المحلية، وتسويات مالية للبائعين.",
-    "detailedDescEn": "Qarsha, built around the slogans \"قررشا صح\" and \"كل قرش بيفرق\", publishes time-limited, limited-quantity offers from partner sellers. Customers claim an offer, which reserves the stock while they check out, and then buy through the web storefront or the Flutter app. Each delivered order credits every seller their share minus a commission that depends on seller size, category and discount.\n\nThe backend is a carefully layered Laravel 12 modular monolith with concurrency-safe checkout, an order state machine, queued jobs for offer schedules, Meilisearch search and eCash / MTN Cash payments. Prices are stored in USD and shown in Syrian pounds.",
-    "detailedDescAr": "تنشر قررشا، المبنية حول شعاري «قررشا صح» و«كل قرش بيفرق»، عروضاً محدودة المدة والكمية من بائعين شركاء. يحجز العميل العرض فتُحجز الكمية له أثناء إتمام الشراء، ثم يشتري عبر متجر الويب أو تطبيق Flutter. وعند تسليم كل طلب يُضاف لكل بائع نصيبه بعد خصم عمولة تُحسب حسب حجم البائع والفئة والخصم.\n\nالواجهة الخلفية مبنية بـ Laravel 12 على شكل وحدات منظمة بطبقات واضحة، مع إتمام شراء آمن من التعارض، وآلة حالات للطلبات، ومهام مجدولة للعروض، وبحث Meilisearch، ودفع عبر eCash وMTN Cash. تُخزَّن الأسعار بالدولار وتُعرض بالليرة السورية.",
-    "highlightsEn": [
-      "Designed and built the React customer storefront",
-      "Deal pages, search, OTP login, addresses with maps, orders, reels and wishlist",
-      "Gifting flow, product comparison, and language, currency and theme settings",
-      "Full Arabic RTL support, connected to the Laravel API"
-    ],
-    "highlightsAr": [
-      "تصميم وتطوير متجر العملاء بـ React",
-      "صفحات العروض والبحث وتسجيل الدخول برمز OTP والعناوين على الخريطة والطلبات والمقاطع وقائمة الأمنيات",
-      "إهداء الطلبات ومقارنة المنتجات وإعدادات اللغة والعملة والمظهر",
-      "دعم كامل للعربية من اليمين لليسار وربط مع واجهة Laravel"
-    ],
-    "roleEn": "Built the React customer storefront end to end, in a 6-person team.",
-    "roleAr": "بناء متجر العملاء بـ React بالكامل، ضمن فريق من 6 أعضاء.",
-    "tags": [
-      "React",
-      "Laravel",
-      "Mobile"
-    ],
-    "tech": [
-      "React 19",
-      "Zustand",
-      "React Router",
-      "Leaflet",
-      "Swiper",
-      "Laravel 12",
-      "Meilisearch",
-      "Flutter"
-    ],
-    "mainImg": "/projects/qarsha/01.webp",
-    "gallery": [
-      "/projects/qarsha/01.webp",
-      "/projects/qarsha/02.webp",
-      "/projects/qarsha/03.webp",
-      "/projects/qarsha/04.webp"
+      "projects/adlify/01.webp",
+      "projects/adlify/02.webp",
+      "projects/adlify/03.webp",
+      "projects/adlify/04.webp"
     ],
     "video": ""
   },
@@ -191,11 +142,11 @@
       "pypdf",
       "python-pptx"
     ],
-    "mainImg": "/projects/rag-lecturer/01.webp",
+    "mainImg": "projects/rag-lecturer/01.webp",
     "gallery": [
-      "/projects/rag-lecturer/01.webp",
-      "/projects/rag-lecturer/02.webp",
-      "/projects/rag-lecturer/03.webp"
+      "projects/rag-lecturer/01.webp",
+      "projects/rag-lecturer/02.webp",
+      "projects/rag-lecturer/03.webp"
     ],
     "video": "",
     "roleEn": "Built with Mahmoud Ramzi: each of us built our own version of the tutor.",
@@ -239,11 +190,11 @@
       "Android Accessibility",
       "MethodChannel"
     ],
-    "mainImg": "/projects/jarvis/01.webp",
+    "mainImg": "projects/jarvis/01.webp",
     "gallery": [
-      "/projects/jarvis/01.webp",
-      "/projects/jarvis/02.webp",
-      "/projects/jarvis/03.webp"
+      "projects/jarvis/01.webp",
+      "projects/jarvis/02.webp",
+      "projects/jarvis/03.webp"
     ],
     "video": ""
   },
@@ -287,11 +238,11 @@
       "React",
       "CSS Modules"
     ],
-    "mainImg": "/projects/chatinformer/01.webp",
+    "mainImg": "projects/chatinformer/01.webp",
     "gallery": [
-      "/projects/chatinformer/01.webp",
-      "/projects/chatinformer/02.webp",
-      "/projects/chatinformer/03.webp"
+      "projects/chatinformer/01.webp",
+      "projects/chatinformer/02.webp",
+      "projects/chatinformer/03.webp"
     ],
     "video": ""
   },
@@ -332,12 +283,12 @@
       "PySide6",
       "SQLAlchemy"
     ],
-    "mainImg": "/projects/biscuitvision/01.webp",
+    "mainImg": "projects/biscuitvision/01.webp",
     "gallery": [
-      "/projects/biscuitvision/01.webp",
-      "/projects/biscuitvision/02.webp",
-      "/projects/biscuitvision/03.webp",
-      "/projects/biscuitvision/04.webp"
+      "projects/biscuitvision/01.webp",
+      "projects/biscuitvision/02.webp",
+      "projects/biscuitvision/03.webp",
+      "projects/biscuitvision/04.webp"
     ],
     "video": "",
     "roleEn": "Built the expert system and the colour filtering, and contributed to defect detection and to choosing the detection thresholds.",
@@ -375,10 +326,10 @@
       "Tkinter",
       "Matplotlib"
     ],
-    "mainImg": "/projects/biscuit-expert-system/01.webp",
+    "mainImg": "projects/biscuit-expert-system/01.webp",
     "gallery": [
-      "/projects/biscuit-expert-system/01.webp",
-      "/projects/biscuit-expert-system/02.webp"
+      "projects/biscuit-expert-system/01.webp",
+      "projects/biscuit-expert-system/02.webp"
     ],
     "video": "",
     "roleEn": "Built the expert system: the rules, certainty factors and recommendation logic.",
@@ -419,12 +370,12 @@
       "mss",
       "PyAutoGUI"
     ],
-    "mainImg": "/projects/zumabot/01.webp",
+    "mainImg": "projects/zumabot/01.webp",
     "gallery": [
-      "/projects/zumabot/01.webp",
-      "/projects/zumabot/02.webp",
-      "/projects/zumabot/03.webp",
-      "/projects/zumabot/04.webp"
+      "projects/zumabot/01.webp",
+      "projects/zumabot/02.webp",
+      "projects/zumabot/03.webp",
+      "projects/zumabot/04.webp"
     ],
     "video": "",
     "roleEn": "Developed the bot's algorithms and the colour filtering together with one teammate.",
@@ -465,12 +416,12 @@
       "MLflow",
       "DVC"
     ],
-    "mainImg": "/projects/fite-classification/01.webp",
+    "mainImg": "projects/fite-classification/01.webp",
     "gallery": [
-      "/projects/fite-classification/01.webp",
-      "/projects/fite-classification/02.webp",
-      "/projects/fite-classification/03.webp",
-      "/projects/fite-classification/04.webp"
+      "projects/fite-classification/01.webp",
+      "projects/fite-classification/02.webp",
+      "projects/fite-classification/03.webp",
+      "projects/fite-classification/04.webp"
     ],
     "video": "",
     "roleEn": "Tried different data-cleaning methods to get the highest prediction score.",
@@ -509,12 +460,12 @@
       "SciKeras",
       "pandas"
     ],
-    "mainImg": "/projects/football-nn/01.webp",
+    "mainImg": "projects/football-nn/01.webp",
     "gallery": [
-      "/projects/football-nn/01.webp",
-      "/projects/football-nn/02.webp",
-      "/projects/football-nn/03.webp",
-      "/projects/football-nn/04.webp"
+      "projects/football-nn/01.webp",
+      "projects/football-nn/02.webp",
+      "projects/football-nn/03.webp",
+      "projects/football-nn/04.webp"
     ],
     "video": "",
     "roleEn": "Filtered the columns and chose which information to feed the model so it gives accurate results.",
@@ -553,12 +504,12 @@
       "Optuna",
       "scikit-learn"
     ],
-    "mainImg": "/projects/autovalue/01.webp",
+    "mainImg": "projects/autovalue/01.webp",
     "gallery": [
-      "/projects/autovalue/01.webp",
-      "/projects/autovalue/02.webp",
-      "/projects/autovalue/03.webp",
-      "/projects/autovalue/04.webp"
+      "projects/autovalue/01.webp",
+      "projects/autovalue/02.webp",
+      "projects/autovalue/03.webp",
+      "projects/autovalue/04.webp"
     ],
     "video": "",
     "roleEn": "Tried different data-cleaning methods on the messy scraped listings to get the highest prediction score.",
@@ -595,12 +546,12 @@
       "Pygame",
       "NumPy"
     ],
-    "mainImg": "/projects/fuzzy-dda/01.webp",
+    "mainImg": "projects/fuzzy-dda/01.webp",
     "gallery": [
-      "/projects/fuzzy-dda/01.webp",
-      "/projects/fuzzy-dda/02.webp",
-      "/projects/fuzzy-dda/03.webp",
-      "/projects/fuzzy-dda/04.webp"
+      "projects/fuzzy-dda/01.webp",
+      "projects/fuzzy-dda/02.webp",
+      "projects/fuzzy-dda/03.webp",
+      "projects/fuzzy-dda/04.webp"
     ],
     "video": "",
     "roleEn": "Two-person project: designed all of the fuzzy rules, applied them to the game, and built the live visualisation of the membership functions.",
@@ -642,12 +593,12 @@
       "ClickPay",
       "Daftra API"
     ],
-    "mainImg": "/projects/valuable-offers/01.webp",
+    "mainImg": "projects/valuable-offers/01.webp",
     "gallery": [
-      "/projects/valuable-offers/01.webp",
-      "/projects/valuable-offers/02.webp",
-      "/projects/valuable-offers/03.webp",
-      "/projects/valuable-offers/04.webp"
+      "projects/valuable-offers/01.webp",
+      "projects/valuable-offers/02.webp",
+      "projects/valuable-offers/03.webp",
+      "projects/valuable-offers/04.webp"
     ],
     "video": ""
   },
@@ -689,12 +640,12 @@
       "Figma",
       "FastAPI"
     ],
-    "mainImg": "/projects/takeed/01.webp",
+    "mainImg": "projects/takeed/01.webp",
     "gallery": [
-      "/projects/takeed/01.webp",
-      "/projects/takeed/02.webp",
-      "/projects/takeed/03.webp",
-      "/projects/takeed/04.webp"
+      "projects/takeed/01.webp",
+      "projects/takeed/02.webp",
+      "projects/takeed/03.webp",
+      "projects/takeed/04.webp"
     ],
     "video": ""
   },
@@ -736,12 +687,12 @@
       "Figma",
       "Playwright"
     ],
-    "mainImg": "/projects/alkhani-factory/01.webp",
+    "mainImg": "projects/alkhani-factory/01.webp",
     "gallery": [
-      "/projects/alkhani-factory/01.webp",
-      "/projects/alkhani-factory/02.webp",
-      "/projects/alkhani-factory/03.webp",
-      "/projects/alkhani-factory/04.webp"
+      "projects/alkhani-factory/01.webp",
+      "projects/alkhani-factory/02.webp",
+      "projects/alkhani-factory/03.webp",
+      "projects/alkhani-factory/04.webp"
     ],
     "video": ""
   },
@@ -780,12 +731,12 @@
       "CSS Modules",
       "Figma"
     ],
-    "mainImg": "/projects/al-muthawroon/01.webp",
+    "mainImg": "projects/al-muthawroon/01.webp",
     "gallery": [
-      "/projects/al-muthawroon/01.webp",
-      "/projects/al-muthawroon/02.webp",
-      "/projects/al-muthawroon/03.webp",
-      "/projects/al-muthawroon/04.webp"
+      "projects/al-muthawroon/01.webp",
+      "projects/al-muthawroon/02.webp",
+      "projects/al-muthawroon/03.webp",
+      "projects/al-muthawroon/04.webp"
     ],
     "video": ""
   },
@@ -828,12 +779,12 @@
       "Flutter",
       "Firebase"
     ],
-    "mainImg": "/projects/jobera/01.webp",
+    "mainImg": "projects/jobera/01.webp",
     "gallery": [
-      "/projects/jobera/01.webp",
-      "/projects/jobera/02.webp",
-      "/projects/jobera/03.webp",
-      "/projects/jobera/04.webp"
+      "projects/jobera/01.webp",
+      "projects/jobera/02.webp",
+      "projects/jobera/03.webp",
+      "projects/jobera/04.webp"
     ],
     "video": "",
     "roleEn": "Built the entire web frontend, including the real-time chat, and most of the admin dashboard.",
@@ -874,12 +825,12 @@
       "Sanctum",
       "Flutter"
     ],
-    "mainImg": "/projects/coach-amr/01.webp",
+    "mainImg": "projects/coach-amr/01.webp",
     "gallery": [
-      "/projects/coach-amr/01.webp",
-      "/projects/coach-amr/02.webp",
-      "/projects/coach-amr/03.webp",
-      "/projects/coach-amr/04.webp"
+      "projects/coach-amr/01.webp",
+      "projects/coach-amr/02.webp",
+      "projects/coach-amr/03.webp",
+      "projects/coach-amr/04.webp"
     ],
     "video": "",
     "roleEn": "Built the landing page (SPA) and the coach dashboard frontend.",
@@ -921,12 +872,12 @@
       "Express",
       "Socket.IO"
     ],
-    "mainImg": "/projects/mafia/01.webp",
+    "mainImg": "projects/mafia/01.webp",
     "gallery": [
-      "/projects/mafia/01.webp",
-      "/projects/mafia/02.webp",
-      "/projects/mafia/03.webp",
-      "/projects/mafia/04.webp"
+      "projects/mafia/01.webp",
+      "projects/mafia/02.webp",
+      "projects/mafia/03.webp",
+      "projects/mafia/04.webp"
     ],
     "video": ""
   },
@@ -1037,12 +988,12 @@
       "Vite",
       "dat.GUI"
     ],
-    "mainImg": "/projects/submarine/01.webp",
+    "mainImg": "projects/submarine/01.webp",
     "gallery": [
-      "/projects/submarine/01.webp",
-      "/projects/submarine/02.webp",
-      "/projects/submarine/03.webp",
-      "/projects/submarine/04.webp"
+      "projects/submarine/01.webp",
+      "projects/submarine/02.webp",
+      "projects/submarine/03.webp",
+      "projects/submarine/04.webp"
     ],
     "video": "",
     "roleEn": "Two-person project with Mahmoud Ramzi, with the work split between the two of us.",
@@ -1126,9 +1077,9 @@
       "Emitter / Receiver",
       "Supervisor API"
     ],
-    "mainImg": "/projects/youbot/01.webp",
+    "mainImg": "projects/youbot/01.webp",
     "gallery": [
-      "/projects/youbot/01.webp"
+      "projects/youbot/01.webp"
     ],
     "video": "",
     "roleEn": "Chose the robot, added all the required components and sensors, set up the Webots environment, and developed a large part of the control solution.",
@@ -1206,12 +1157,12 @@
       "PVM",
       "MPI.NET"
     ],
-    "mainImg": "/projects/parallel-distribution/01.webp",
+    "mainImg": "projects/parallel-distribution/01.webp",
     "gallery": [
-      "/projects/parallel-distribution/01.webp",
-      "/projects/parallel-distribution/02.webp",
-      "/projects/parallel-distribution/03.webp",
-      "/projects/parallel-distribution/04.webp"
+      "projects/parallel-distribution/01.webp",
+      "projects/parallel-distribution/02.webp",
+      "projects/parallel-distribution/03.webp",
+      "projects/parallel-distribution/04.webp"
     ],
     "video": "",
     "roleEn": "Contributed to both versions: the PVM version on Windows XP (2 cores) and the MPI.NET version on modern Windows (16 cores).",
@@ -1251,12 +1202,12 @@
       "Python",
       "heapq"
     ],
-    "mainImg": "/projects/logic-magnets/01.webp",
+    "mainImg": "projects/logic-magnets/01.webp",
     "gallery": [
-      "/projects/logic-magnets/01.webp",
-      "/projects/logic-magnets/02.webp",
-      "/projects/logic-magnets/03.webp",
-      "/projects/logic-magnets/04.webp"
+      "projects/logic-magnets/01.webp",
+      "projects/logic-magnets/02.webp",
+      "projects/logic-magnets/03.webp",
+      "projects/logic-magnets/04.webp"
     ],
     "video": ""
   },
@@ -1289,11 +1240,11 @@
     "tech": [
       "Python"
     ],
-    "mainImg": "/projects/ludo-ai/01.webp",
+    "mainImg": "projects/ludo-ai/01.webp",
     "gallery": [
-      "/projects/ludo-ai/01.webp",
-      "/projects/ludo-ai/02.webp",
-      "/projects/ludo-ai/03.webp"
+      "projects/ludo-ai/01.webp",
+      "projects/ludo-ai/02.webp",
+      "projects/ludo-ai/03.webp"
     ],
     "video": "",
     "roleEn": "Two-person project with Mahmoud Ramzi, with the work split between the two of us.",
@@ -1328,11 +1279,11 @@
       "ANTLR4",
       "Graphviz"
     ],
-    "mainImg": "/projects/lisp-compiler/01.webp",
+    "mainImg": "projects/lisp-compiler/01.webp",
     "gallery": [
-      "/projects/lisp-compiler/01.webp",
-      "/projects/lisp-compiler/02.webp",
-      "/projects/lisp-compiler/03.webp"
+      "projects/lisp-compiler/01.webp",
+      "projects/lisp-compiler/02.webp",
+      "projects/lisp-compiler/03.webp"
     ],
     "video": "",
     "roleEn": "Two-person project with Mahmoud Ramzi, with the work split between the two of us.",
@@ -1367,12 +1318,12 @@
       "Python",
       "Pygame"
     ],
-    "mainImg": "/projects/blob-wars/01.webp",
+    "mainImg": "projects/blob-wars/01.webp",
     "gallery": [
-      "/projects/blob-wars/01.webp",
-      "/projects/blob-wars/02.webp",
-      "/projects/blob-wars/03.webp",
-      "/projects/blob-wars/04.webp"
+      "projects/blob-wars/01.webp",
+      "projects/blob-wars/02.webp",
+      "projects/blob-wars/03.webp",
+      "projects/blob-wars/04.webp"
     ],
     "video": "",
     "roleEn": "Individual work: built this version alone. Mahmoud Ramzi built his own separate version of the same assignment.",

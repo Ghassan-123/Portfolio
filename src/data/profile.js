@@ -6,8 +6,9 @@ export const profile = {
     initials: 'MG',
 
     // Put your photo at public/profile.jpg (any name works, just update the path).
+    // Paths to files in public/ have no leading slash, so they also work under /Portfolio/.
     // If the file is missing, an animated monogram is shown instead.
-    photo: '/profile.jpg',
+    photo: 'profile.jpg',
 
     // Contact & links: fill in what you want visible.
     email: '',
@@ -17,6 +18,6 @@ export const profile = {
         github: '',
         linkedin: '',
         behance: '',
-        cv: '', // e.g. '/cv.pdf' placed in public/
+        cv: '', // e.g. 'cv.pdf' placed in public/
     },
 };
