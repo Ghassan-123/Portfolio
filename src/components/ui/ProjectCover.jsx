@@ -46,7 +46,7 @@ export default function ProjectCover({ project, title, className = '', imgClassN
                 alt={title}
                 loading="lazy"
                 onError={() => setFailed(true)}
-                className={`w-full h-full object-cover ${imgClassName}`}
+                className={`w-full h-full object-cover object-top ${imgClassName}`}
             />
         );
     }

@@ -77,7 +77,15 @@ html[dir="rtl"] body {
 [data-reveal="left"]  { transform: translateX(-40px); }
 [data-reveal="right"] { transform: translateX(40px); }
 [data-reveal="scale"] { transform: scale(0.92); }
-[data-reveal].is-visible { opacity: 1; transform: none; filter: none; }
+[data-reveal][data-visible] { opacity: 1; transform: none; filter: none; }
+
+/* On phones and tablets, side-slides near the screen edge feel cramped: reveal upwards instead. */
+@media (max-width: 1023px) {
+  [data-reveal="left"],
+  [data-reveal="right"] { transform: translateY(32px); }
+  [data-reveal="left"][data-visible],
+  [data-reveal="right"][data-visible] { transform: none; }
+}
 
 /* ------------------------------------------------------------------
    Utilities

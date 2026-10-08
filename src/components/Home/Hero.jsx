@@ -63,7 +63,7 @@ export default function Hero({ t, lang, isRTL, openProjects, scrollToSection }) 
                 <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-12 animate-fade-up" style={{ animationDelay: '900ms' }}>
                     <button
                         onClick={() => openProjects('All')}
-                        className="group relative overflow-hidden flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold rounded-2xl shadow-[0_0_30px_rgba(20,184,166,0.35)] hover:shadow-[0_0_45px_rgba(6,182,212,0.5)] transition-all duration-300 hover:-translate-y-1 text-lg cursor-pointer"
+                        className="group relative overflow-hidden flex items-center gap-3 px-6 sm:px-8 py-4 whitespace-nowrap bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold rounded-2xl shadow-[0_0_30px_rgba(20,184,166,0.35)] hover:shadow-[0_0_45px_rgba(6,182,212,0.5)] transition-all duration-300 hover:-translate-y-1 text-lg cursor-pointer"
                     >
                         <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
                         <span className="relative">{t.hero.cta}</span>
@@ -75,7 +75,7 @@ export default function Hero({ t, lang, isRTL, openProjects, scrollToSection }) 
                     </button>
                     <button
                         onClick={() => scrollToSection('contact')}
-                        className="flex items-center gap-3 px-8 py-4 rounded-2xl border border-zinc-700 bg-zinc-900/60 backdrop-blur text-gray-200 font-bold text-lg hover:border-teal-500 hover:text-cyan-300 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                        className="flex items-center gap-3 px-6 sm:px-8 py-4 whitespace-nowrap rounded-2xl border border-zinc-700 bg-zinc-900/60 backdrop-blur text-gray-200 font-bold text-lg hover:border-teal-500 hover:text-cyan-300 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                     >
                         <Mail size={20} /> {t.hero.ctaSecondary}
                     </button>

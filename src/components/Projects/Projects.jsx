@@ -27,17 +27,17 @@ function Showcase({ project, t, lang, isRTL, index, total, onPrev, onNext }) {
     return (
         <div className="bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden shadow-2xl">
             {/* Control bar */}
-            <div className="flex justify-between items-center bg-zinc-950 p-3 md:p-4 border-b border-zinc-800">
-                <button onClick={onPrev} className="flex items-center gap-2 text-cyan-400 hover:text-teal-300 font-semibold px-4 py-2 hover:bg-zinc-900 rounded-lg transition-colors cursor-pointer group">
+            <div className="flex justify-between items-center gap-2 bg-zinc-950 p-2 sm:p-3 md:p-4 border-b border-zinc-800">
+                <button onClick={onPrev} className="flex items-center gap-2 text-cyan-400 hover:text-teal-300 font-semibold text-sm sm:text-base px-2.5 sm:px-4 py-2 shrink-0 hover:bg-zinc-900 rounded-lg transition-colors cursor-pointer group">
                     <PrevArrow size={18} className="transition-transform group-hover:-translate-x-1 rtl:group-hover:translate-x-1" /> {t.projects.prev}
                 </button>
-                <div className="flex items-center gap-1.5" aria-hidden="true">
+                <div className="hidden sm:flex items-center gap-1.5 min-w-0 overflow-hidden" aria-hidden="true">
                     {Array.from({ length: Math.min(total, 12) }).map((_, i) => (
                         <span key={i} className={`h-1.5 rounded-full transition-all duration-500 ${i === index % 12 ? 'w-6 bg-teal-400' : 'w-1.5 bg-zinc-700'}`} />
                     ))}
                     <span className="ms-3 text-gray-500 text-sm font-mono hidden sm:inline">{index + 1} / {total}</span>
                 </div>
-                <button onClick={onNext} className="flex items-center gap-2 text-cyan-400 hover:text-teal-300 font-semibold px-4 py-2 hover:bg-zinc-900 rounded-lg transition-colors cursor-pointer group">
+                <button onClick={onNext} className="flex items-center gap-2 text-cyan-400 hover:text-teal-300 font-semibold text-sm sm:text-base px-2.5 sm:px-4 py-2 shrink-0 hover:bg-zinc-900 rounded-lg transition-colors cursor-pointer group">
                     {t.projects.next} <NextArrow size={18} className="transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
                 </button>
             </div>
@@ -92,8 +92,9 @@ function Showcase({ project, t, lang, isRTL, index, total, onPrev, onNext }) {
                                 <SectionTitle icon={Images}>{t.projects.gallery}</SectionTitle>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {project.gallery.map((img, idx) => (
-                                        <a key={img} href={img} target="_blank" rel="noreferrer" className="group rounded-2xl overflow-hidden border border-zinc-800 hover:border-teal-500/50 transition-colors aspect-video block">
-                                            <img src={img} alt={`${title} ${idx + 1}`} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        <a key={img} href={img} target="_blank" rel="noreferrer" className="group rounded-2xl overflow-hidden border border-zinc-800 hover:border-teal-500/50 transition-colors aspect-video block bg-zinc-950">
+                                            {/* contain, not cover: screenshots mix landscape, square and phone-portrait shapes */}
+                                            <img src={img} alt={`${title} ${idx + 1}`} loading="lazy" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                                         </a>
                                     ))}
                                 </div>

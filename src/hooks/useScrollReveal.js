@@ -14,14 +14,16 @@ export function useScrollReveal(deps = []) {
 
         const targets = [
             ...(root.hasAttribute('data-reveal') ? [root] : []),
-            ...root.querySelectorAll('[data-reveal]:not(.is-visible)'),
+            ...root.querySelectorAll('[data-reveal]:not([data-visible])'),
         ];
 
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
+                        // An attribute, not a class: React rewrites className whenever a card's
+                        // classes change (e.g. the selected card), which would hide it again.
+                        entry.target.setAttribute('data-visible', '');
                         observer.unobserve(entry.target);
                     }
                 });

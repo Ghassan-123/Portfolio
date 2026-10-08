@@ -8,12 +8,13 @@
     "titleAr": "MatchLens: تحليل مباريات كرة القدم بالذكاء الاصطناعي",
     "shortDescEn": "Graduation project. A desktop app that turns any football broadcast into live tactical data: tracked players, a 2D radar, passes, shots and xG.",
     "shortDescAr": "مشروع التخرج. تطبيق مكتبي يحوّل أي بث لمباراة كرة قدم إلى بيانات تكتيكية حية: تتبع اللاعبين، رادار ثنائي الأبعاد، التمريرات، التسديدات وxG.",
-    "detailedDescEn": "MatchLens watches a football match (a video file, a stream or a live feed) and rebuilds what happens on the pitch in real time. A fine-tuned YOLO26 model detects players, goalkeepers, referees and the ball. Each of them keeps a stable identity through occlusions and camera pans, and is assigned to a team from their kit colours. A second keypoint model and a RANSAC homography project everyone from camera pixels onto a real 105 × 68 m pitch.\n\nFrom those positions, event detectors recognise passes, crosses, carries, interceptions, shots, goals with assists, goalkeeper actions and set pieces, and every event is scored with xG, xA and xT models. The results stream over WebSockets to a React + Electron dashboard with an annotated video, a tactical radar, live statistics, heat maps and a match archive.",
-    "detailedDescAr": "يراقب MatchLens مباراة كرة القدم (ملف فيديو أو بث مباشر) ويعيد بناء ما يحدث على أرض الملعب في الوقت الحقيقي. يكتشف نموذج YOLO26 مدرَّب خصيصاً اللاعبين وحراس المرمى والحكام والكرة، ويحافظ على هوية ثابتة لكل منهم رغم التداخل وحركة الكاميرا، ويحدد فريق كل لاعب من ألوان قميصه. ثم يُسقط نموذج ثانٍ للنقاط المرجعية مع Homography وRANSAC مواقع الجميع من بكسلات الكاميرا إلى ملعب حقيقي بأبعاد 105 × 68 متراً.\n\nانطلاقاً من هذه المواقع، تتعرف كواشف الأحداث على التمريرات والعرضيات والمراوغات والاعتراضات والتسديدات والأهداف مع صانعيها وتدخلات الحارس والكرات الثابتة، وتُقيَّم كل لقطة بنماذج xG وxA وxT. تُبث النتائج عبر WebSockets إلى لوحة تحكم React + Electron تعرض الفيديو المشروح ورادار تكتيكي وإحصاءات حية وخرائط حرارية وأرشيفاً للمباريات.",
+    "detailedDescEn": "MatchLens watches a football match (a video file, a stream or a live feed) and rebuilds what happens on the pitch in real time. A fine-tuned YOLO26 model detects players, goalkeepers, referees and the ball. Each of them keeps a stable identity through occlusions and camera pans, and is assigned to a team by k-means clustering of their kit colours. A second keypoint model and a RANSAC homography project everyone from camera pixels onto a real 105 × 68 m pitch.\n\nFrom those positions, event detectors recognise passes, crosses, carries, interceptions, shots, goals with assists, goalkeeper actions and set pieces, and every event is scored with xG, xA and xT models. The results stream over WebSockets to a React + Electron dashboard with an annotated video, a tactical radar, live statistics (distance covered, sprints, formations), heat maps and a match archive.",
+    "detailedDescAr": "يراقب MatchLens مباراة كرة القدم (ملف فيديو أو بث مباشر) ويعيد بناء ما يحدث على أرض الملعب في الوقت الحقيقي. يكتشف نموذج YOLO26 مدرَّب خصيصاً اللاعبين وحراس المرمى والحكام والكرة، ويحافظ على هوية ثابتة لكل منهم رغم التداخل وحركة الكاميرا، ويحدد فريق كل لاعب بتجميع k-means لألوان قميصه. ثم يُسقط نموذج ثانٍ للنقاط المرجعية مع Homography وRANSAC مواقع الجميع من بكسلات الكاميرا إلى ملعب حقيقي بأبعاد 105 × 68 متراً.\n\nانطلاقاً من هذه المواقع، تتعرف كواشف الأحداث على التمريرات والعرضيات والمراوغات والاعتراضات والتسديدات والأهداف مع صانعيها وتدخلات الحارس والكرات الثابتة، وتُقيَّم كل لقطة بنماذج xG وxA وxT. تُبث النتائج عبر WebSockets إلى لوحة تحكم React + Electron تعرض الفيديو المشروح ورادار تكتيكي وإحصاءات حية (المسافة المقطوعة والانطلاقات والتشكيلات) وخرائط حرارية وأرشيفاً للمباريات.",
     "highlightsEn": [
       "Fine-tuned YOLO26 detector, exported to TensorRT for real-time inference",
       "ByteTrack-style tracking with camera-motion compensation and a Kalman-based ball tracker",
       "Pixel-to-metre homography and ball-height recovery from a ballistic fit",
+      "Automatic team assignment with k-means on jersey colours",
       "Event detection plus xG / xA / xT value models",
       "FastAPI and WebSocket engine with a React + Electron desktop UI"
     ],
@@ -21,6 +22,7 @@
       "نموذج YOLO26 مدرَّب خصيصاً ومُصدَّر إلى TensorRT للاستدلال في الوقت الحقيقي",
       "تتبع على نمط ByteTrack مع تعويض حركة الكاميرا ومتتبع للكرة قائم على Kalman",
       "تحويل من البكسل إلى الأمتار عبر Homography واستنتاج ارتفاع الكرة",
+      "تحديد الفرق تلقائياً بتجميع k-means على ألوان القمصان",
       "كشف أحداث المباراة مع نماذج xG وxA وxT",
       "محرك FastAPI وWebSockets مع واجهة مكتبية React + Electron"
     ],
@@ -42,8 +44,13 @@
       "React",
       "Electron"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/matchlens/01.webp",
+    "gallery": [
+      "/projects/matchlens/01.webp",
+      "/projects/matchlens/02.webp",
+      "/projects/matchlens/03.webp",
+      "/projects/matchlens/04.webp"
+    ],
     "video": "",
     "roleEn": "Built the homography (pixel-to-pitch mapping), worked on part of the tracking, and built the frontend: the dashboard the whole product is used through.",
     "roleAr": "بناء الـ Homography (تحويل البكسل إلى إحداثيات الملعب)، والمشاركة في جزء من التتبع، وبناء الواجهة الأمامية: لوحة التحكم التي يُستخدم المنتج من خلالها بالكامل."
@@ -89,8 +96,13 @@
       "Flutter",
       "i18next"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/adlify/01.webp",
+    "gallery": [
+      "/projects/adlify/01.webp",
+      "/projects/adlify/02.webp",
+      "/projects/adlify/03.webp",
+      "/projects/adlify/04.webp"
+    ],
     "video": ""
   },
   {
@@ -133,8 +145,13 @@
       "Meilisearch",
       "Flutter"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/qarsha/01.webp",
+    "gallery": [
+      "/projects/qarsha/01.webp",
+      "/projects/qarsha/02.webp",
+      "/projects/qarsha/03.webp",
+      "/projects/qarsha/04.webp"
+    ],
     "video": ""
   },
   {
@@ -146,17 +163,17 @@
     "titleAr": "مساعد المحاضرات الذكي (RAG)",
     "shortDescEn": "A bilingual AI study tutor. Upload lecture PDFs and slides, then chat with them and get answers that cite the source page.",
     "shortDescAr": "مساعد دراسي ذكي ثنائي اللغة: ارفع ملفات المحاضرات والشرائح، ثم اسألها واحصل على إجابات مع الإشارة إلى الصفحة المصدر.",
-    "detailedDescEn": "A Retrieval-Augmented Generation system for students. Lecture PDFs and PowerPoint files are split into parent and child chunks, embedded with a multilingual model and stored in ChromaDB. For each question, the system detects the language and intent, expands the question into several searches, merges the results, re-ranks them with a cross-encoder, and has a Llama 3 model answer only from those sources, with inline citations.\n\nA semantic cache answers repeated or reworded questions instantly, and the Streamlit interface supports Arabic right-to-left text, source cards and suggested follow-up questions.",
-    "detailedDescAr": "نظام توليد معزّز بالاسترجاع (RAG) للطلاب. تُقسَّم ملفات المحاضرات (PDF وPowerPoint) إلى مقاطع رئيسية وفرعية، وتُحوَّل إلى متجهات بنموذج متعدد اللغات وتُخزَّن في ChromaDB. لكل سؤال يحدد النظام اللغة والهدف، ويولّد عدة صيغ للبحث، ويدمج النتائج ويعيد ترتيبها بنموذج Cross-Encoder، ثم يجيب نموذج Llama 3 من هذه المصادر فقط مع ذكر المرجع داخل النص.\n\nتجيب ذاكرة مؤقتة دلالية فوراً عن الأسئلة المكررة أو المعاد صياغتها، وتدعم واجهة Streamlit الكتابة العربية من اليمين لليسار وبطاقات المصادر واقتراح أسئلة متابعة.",
+    "detailedDescEn": "A Retrieval-Augmented Generation system for students. Lecture PDFs and PowerPoint files are split into parent and child chunks, embedded with a multilingual model and stored in ChromaDB. For each question, the system detects the language and intent, expands the question into several searches, fuses the per-query results with Reciprocal Rank Fusion, re-ranks them with a cross-encoder, and has a Llama 3 model answer only from those sources, with inline citations.\n\nA semantic cache answers repeated or reworded questions instantly, and the Streamlit interface supports Arabic right-to-left text, source cards and suggested follow-up questions.",
+    "detailedDescAr": "نظام توليد معزّز بالاسترجاع (RAG) للطلاب. تُقسَّم ملفات المحاضرات (PDF وPowerPoint) إلى مقاطع رئيسية وفرعية، وتُحوَّل إلى متجهات بنموذج متعدد اللغات وتُخزَّن في ChromaDB. لكل سؤال يحدد النظام اللغة والهدف، ويولّد عدة صيغ للبحث، ويدمج نتائج كل استعلام بطريقة Reciprocal Rank Fusion ثم يعيد ترتيبها بنموذج Cross-Encoder، ثم يجيب نموذج Llama 3 من هذه المصادر فقط مع ذكر المرجع داخل النص.\n\nتجيب ذاكرة مؤقتة دلالية فوراً عن الأسئلة المكررة أو المعاد صياغتها، وتدعم واجهة Streamlit الكتابة العربية من اليمين لليسار وبطاقات المصادر واقتراح أسئلة متابعة.",
     "highlightsEn": [
       "Multilingual embeddings (e5) with ChromaDB",
-      "Multi-query retrieval and cross-encoder re-ranking",
+      "Multi-query retrieval, Reciprocal Rank Fusion and cross-encoder re-ranking",
       "Answers with source citations and follow-up question suggestions",
       "Semantic cache, and a choice of LLM provider (Groq, Cerebras, OpenRouter)"
     ],
     "highlightsAr": [
       "تضمينات متعددة اللغات (e5) مع ChromaDB",
-      "استرجاع بصيغ متعددة للسؤال مع إعادة ترتيب بنموذج Cross-Encoder",
+      "استرجاع بصيغ متعددة للسؤال ودمج النتائج بـ Reciprocal Rank Fusion وإعادة ترتيبها بنموذج Cross-Encoder",
       "إجابات موثقة بالمصادر مع اقتراح أسئلة متابعة",
       "ذاكرة مؤقتة دلالية وإمكانية اختيار مزوّد النموذج (Groq وCerebras وOpenRouter)"
     ],
@@ -174,9 +191,15 @@
       "pypdf",
       "python-pptx"
     ],
-    "mainImg": "",
-    "gallery": [],
-    "video": ""
+    "mainImg": "/projects/rag-lecturer/01.webp",
+    "gallery": [
+      "/projects/rag-lecturer/01.webp",
+      "/projects/rag-lecturer/02.webp",
+      "/projects/rag-lecturer/03.webp"
+    ],
+    "video": "",
+    "roleEn": "Built with Mahmoud Ramzi: each of us built our own version of the tutor.",
+    "roleAr": "مشروع مع محمود رمزي: بنى كل منا نسخته الخاصة من المساعد الدراسي."
   },
   {
     "id": "jarvis",
@@ -216,8 +239,12 @@
       "Android Accessibility",
       "MethodChannel"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/jarvis/01.webp",
+    "gallery": [
+      "/projects/jarvis/01.webp",
+      "/projects/jarvis/02.webp",
+      "/projects/jarvis/03.webp"
+    ],
     "video": ""
   },
   {
@@ -260,8 +287,12 @@
       "React",
       "CSS Modules"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/chatinformer/01.webp",
+    "gallery": [
+      "/projects/chatinformer/01.webp",
+      "/projects/chatinformer/02.webp",
+      "/projects/chatinformer/03.webp"
+    ],
     "video": ""
   },
   {
@@ -301,8 +332,13 @@
       "PySide6",
       "SQLAlchemy"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/biscuitvision/01.webp",
+    "gallery": [
+      "/projects/biscuitvision/01.webp",
+      "/projects/biscuitvision/02.webp",
+      "/projects/biscuitvision/03.webp",
+      "/projects/biscuitvision/04.webp"
+    ],
     "video": "",
     "roleEn": "Built the expert system and the colour filtering, and contributed to defect detection and to choosing the detection thresholds.",
     "roleAr": "بناء النظام الخبير والفلترة اللونية، والمساهمة في كشف العيوب واختيار قيم العتبات."
@@ -339,8 +375,11 @@
       "Tkinter",
       "Matplotlib"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/biscuit-expert-system/01.webp",
+    "gallery": [
+      "/projects/biscuit-expert-system/01.webp",
+      "/projects/biscuit-expert-system/02.webp"
+    ],
     "video": "",
     "roleEn": "Built the expert system: the rules, certainty factors and recommendation logic.",
     "roleAr": "بناء النظام الخبير: القواعد ومعاملات اليقين ومنطق التوصيات."
@@ -380,8 +419,13 @@
       "mss",
       "PyAutoGUI"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/zumabot/01.webp",
+    "gallery": [
+      "/projects/zumabot/01.webp",
+      "/projects/zumabot/02.webp",
+      "/projects/zumabot/03.webp",
+      "/projects/zumabot/04.webp"
+    ],
     "video": "",
     "roleEn": "Developed the bot's algorithms and the colour filtering together with one teammate.",
     "roleAr": "تطوير خوارزميات البوت والفلترة اللونية بالتعاون مع زميل واحد."
@@ -421,8 +465,13 @@
       "MLflow",
       "DVC"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/fite-classification/01.webp",
+    "gallery": [
+      "/projects/fite-classification/01.webp",
+      "/projects/fite-classification/02.webp",
+      "/projects/fite-classification/03.webp",
+      "/projects/fite-classification/04.webp"
+    ],
     "video": "",
     "roleEn": "Tried different data-cleaning methods to get the highest prediction score.",
     "roleAr": "تجربة طرق مختلفة لتنظيف البيانات للوصول إلى أعلى دقة تنبؤ."
@@ -460,8 +509,13 @@
       "SciKeras",
       "pandas"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/football-nn/01.webp",
+    "gallery": [
+      "/projects/football-nn/01.webp",
+      "/projects/football-nn/02.webp",
+      "/projects/football-nn/03.webp",
+      "/projects/football-nn/04.webp"
+    ],
     "video": "",
     "roleEn": "Filtered the columns and chose which information to feed the model so it gives accurate results.",
     "roleAr": "تصفية الأعمدة واختيار المعلومات المناسبة لتغذية النموذج للحصول على نتائج دقيقة."
@@ -499,8 +553,13 @@
       "Optuna",
       "scikit-learn"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/autovalue/01.webp",
+    "gallery": [
+      "/projects/autovalue/01.webp",
+      "/projects/autovalue/02.webp",
+      "/projects/autovalue/03.webp",
+      "/projects/autovalue/04.webp"
+    ],
     "video": "",
     "roleEn": "Tried different data-cleaning methods on the messy scraped listings to get the highest prediction score.",
     "roleAr": "تجربة طرق مختلفة لتنظيف بيانات الإعلانات المجمّعة غير المنظمة للوصول إلى أعلى دقة تنبؤ."
@@ -536,8 +595,13 @@
       "Pygame",
       "NumPy"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/fuzzy-dda/01.webp",
+    "gallery": [
+      "/projects/fuzzy-dda/01.webp",
+      "/projects/fuzzy-dda/02.webp",
+      "/projects/fuzzy-dda/03.webp",
+      "/projects/fuzzy-dda/04.webp"
+    ],
     "video": "",
     "roleEn": "Two-person project: designed all of the fuzzy rules, applied them to the game, and built the live visualisation of the membership functions.",
     "roleAr": "مشروع لشخصين: تصميم جميع القواعد الضبابية وتطبيقها على اللعبة، وبناء العرض الحي لدوال الانتماء."
@@ -549,10 +613,10 @@
     "year": "2026",
     "titleEn": "Valuable Offers: Coupons Marketplace",
     "titleAr": "Valuable Offers: متجر القسائم والبطاقات المسبقة الدفع",
-    "shortDescEn": "A bilingual e-commerce platform selling vendor coupons, prepaid cards and bundles, with card payments and PDF receipts with QR codes.",
-    "shortDescAr": "منصة تجارة إلكترونية ثنائية اللغة لبيع قسائم الخصم والبطاقات المسبقة الدفع والباقات، مع دفع بالبطاقات وإيصالات PDF تحتوي رمز QR.",
-    "detailedDescEn": "Customers browse offers by city and category, verify their phone with an OTP, and pay by card through ClickPay. Each purchase reserves a unique coupon code, produces a downloadable receipt, and automatically creates an invoice in the Daftra accounting system. Admins manage vendors, offers, bulk code imports from Excel, bundles and statistics from a separate React dashboard.",
-    "detailedDescAr": "يتصفح العملاء العروض حسب المدينة والفئة، ويتحققون من رقم الهاتف برمز OTP، ويدفعون بالبطاقة عبر ClickPay. تحجز كل عملية شراء رمز قسيمة فريداً، وتُنشئ إيصالاً قابلاً للتنزيل، وتسجّل فاتورة تلقائياً في نظام Daftra المحاسبي. ويدير المسؤولون البائعين والعروض واستيراد الرموز من Excel والباقات والإحصاءات من لوحة تحكم React مستقلة.",
+    "shortDescEn": "A bilingual e-commerce platform for the Saudi market, selling vendor coupons, prepaid cards and bundles, with card payments and PDF receipts with QR codes.",
+    "shortDescAr": "منصة تجارة إلكترونية ثنائية اللغة موجهة للسوق السعودية لبيع قسائم الخصم والبطاقات المسبقة الدفع والباقات، مع دفع بالبطاقات وإيصالات PDF تحتوي رمز QR.",
+    "detailedDescEn": "Built for the Saudi market, with prices in SAR. Customers browse offers by city and category, verify their phone with an OTP, and pay by card through ClickPay. Each purchase reserves a unique coupon code, produces a downloadable receipt, and automatically creates an invoice in the Daftra accounting system. Admins manage vendors, offers, bulk code imports from Excel, bundles and statistics from a separate React dashboard.",
+    "detailedDescAr": "صُممت للسوق السعودية بأسعار بالريال السعودي. يتصفح العملاء العروض حسب المدينة والفئة، ويتحققون من رقم الهاتف برمز OTP، ويدفعون بالبطاقة عبر ClickPay. تحجز كل عملية شراء رمز قسيمة فريداً، وتُنشئ إيصالاً قابلاً للتنزيل، وتسجّل فاتورة تلقائياً في نظام Daftra المحاسبي. ويدير المسؤولون البائعين والعروض واستيراد الرموز من Excel والباقات والإحصاءات من لوحة تحكم React مستقلة.",
     "highlightsEn": [
       "Customer site: OTP authentication, cart and Buy Now, payment flow, receipts and profile",
       "Admin dashboard screens for offers and vendors",
@@ -578,8 +642,13 @@
       "ClickPay",
       "Daftra API"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/valuable-offers/01.webp",
+    "gallery": [
+      "/projects/valuable-offers/01.webp",
+      "/projects/valuable-offers/02.webp",
+      "/projects/valuable-offers/03.webp",
+      "/projects/valuable-offers/04.webp"
+    ],
     "video": ""
   },
   {
@@ -603,8 +672,8 @@
       "صفحة التحقق من الشهادات وعارض نماذج PDF",
       "مساعد ChatInformer الذكي مدمج"
     ],
-    "roleEn": "Design and front end: new sections, the certificate check, and the AI assistant integration.",
-    "roleAr": "التصميم والواجهات: الأقسام الجديدة والتحقق من الشهادات ودمج المساعد الذكي.",
+    "roleEn": "Designed the site in Figma and built it together with Mahmoud Ramzi (the original version and the redesign), including new sections, the certificate check and the AI assistant integration.",
+    "roleAr": "تصميم الموقع في Figma وبناؤه بالشراكة مع محمود رمزي (النسخة الأصلية والتصميم الجديد)، بما في ذلك الأقسام الجديدة والتحقق من الشهادات ودمج المساعد الذكي.",
     "tags": [
       "React",
       "Design",
@@ -620,8 +689,13 @@
       "Figma",
       "FastAPI"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/takeed/01.webp",
+    "gallery": [
+      "/projects/takeed/01.webp",
+      "/projects/takeed/02.webp",
+      "/projects/takeed/03.webp",
+      "/projects/takeed/04.webp"
+    ],
     "video": ""
   },
   {
@@ -662,8 +736,13 @@
       "Figma",
       "Playwright"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/alkhani-factory/01.webp",
+    "gallery": [
+      "/projects/alkhani-factory/01.webp",
+      "/projects/alkhani-factory/02.webp",
+      "/projects/alkhani-factory/03.webp",
+      "/projects/alkhani-factory/04.webp"
+    ],
     "video": ""
   },
   {
@@ -701,8 +780,13 @@
       "CSS Modules",
       "Figma"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/al-muthawroon/01.webp",
+    "gallery": [
+      "/projects/al-muthawroon/01.webp",
+      "/projects/al-muthawroon/02.webp",
+      "/projects/al-muthawroon/03.webp",
+      "/projects/al-muthawroon/04.webp"
+    ],
     "video": ""
   },
   {
@@ -714,17 +798,19 @@
     "titleAr": "Jobera: منصة الوظائف والعمل الحر",
     "shortDescEn": "A two-sided job board and freelancing marketplace with real-time chat, push notifications, a wallet, and web and mobile apps.",
     "shortDescAr": "منصة وظائف وعمل حر للطرفين مع دردشة فورية وإشعارات وتطبيقات للويب والجوال ومحفظة إلكترونية.",
-    "detailedDescEn": "Individuals and companies build rich profiles (skills, education, certificates, portfolios), post and apply for full-time, part-time and freelance work, send offers, chat in real time, and pay through an in-app wallet with redeem codes. The system includes a job feed with statistics, bookmarks, reviews, Google sign-in, web push notifications and an admin dashboard. It has a Laravel API, a React web app and a Flutter mobile app.",
-    "detailedDescAr": "ينشئ الأفراد والشركات ملفات تعريفية غنية (المهارات، التعليم، الشهادات، معارض الأعمال)، وينشرون الوظائف الدائمة والجزئية ومشاريع العمل الحر ويتقدمون إليها، ويقدّمون العروض، ويتراسلون فورياً، ويدفعون عبر محفظة داخلية برموز شحن. وتضم المنصة صفحة وظائف مع إحصاءات، وإشارات مرجعية، وتقييمات، وتسجيل دخول عبر Google، وإشعارات فورية، ولوحة إدارة. وتتكون من واجهة Laravel البرمجية وتطبيق ويب React وتطبيق Flutter.",
+    "detailedDescEn": "Individuals and companies build rich profiles (skills, education, certificates, portfolios), post and apply for full-time, part-time and freelance work, send offers, chat in real time, and pay through an in-app wallet with redeem codes. The system includes a job feed with statistics, bookmarks, reviews, Google sign-in, web push notifications, multilingual support, a dark mode and an admin dashboard. It has a Laravel API, a React web app and a Flutter mobile app.",
+    "detailedDescAr": "ينشئ الأفراد والشركات ملفات تعريفية غنية (المهارات، التعليم، الشهادات، معارض الأعمال)، وينشرون الوظائف الدائمة والجزئية ومشاريع العمل الحر ويتقدمون إليها، ويقدّمون العروض، ويتراسلون فورياً، ويدفعون عبر محفظة داخلية برموز شحن. وتضم المنصة صفحة وظائف مع إحصاءات، وإشارات مرجعية، وتقييمات، وتسجيل دخول عبر Google، وإشعارات فورية، ودعماً متعدد اللغات، ووضعاً داكناً، ولوحة إدارة. وتتكون من واجهة Laravel البرمجية وتطبيق ويب React وتطبيق Flutter.",
     "highlightsEn": [
       "Regular jobs and freelance jobs with offers and applicant lists",
       "Real-time chat with Pusher / Reverb, and push notifications",
-      "Wallet, transactions and redeem codes"
+      "Wallet, transactions and redeem codes",
+      "Multilingual interface with a dark mode"
     ],
     "highlightsAr": [
       "وظائف عادية ومشاريع عمل حر مع العروض وقوائم المتقدمين",
       "دردشة فورية عبر Pusher / Reverb وإشعارات فورية",
-      "محفظة ومعاملات ورموز شحن"
+      "محفظة ومعاملات ورموز شحن",
+      "واجهة متعددة اللغات مع وضع داكن"
     ],
     "tags": [
       "React",
@@ -742,8 +828,13 @@
       "Flutter",
       "Firebase"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/jobera/01.webp",
+    "gallery": [
+      "/projects/jobera/01.webp",
+      "/projects/jobera/02.webp",
+      "/projects/jobera/03.webp",
+      "/projects/jobera/04.webp"
+    ],
     "video": "",
     "roleEn": "Built the entire web frontend, including the real-time chat, and most of the admin dashboard.",
     "roleAr": "بناء واجهة الويب بالكامل بما فيها الدردشة الفورية، ومعظم لوحة الإدارة."
@@ -783,8 +874,13 @@
       "Sanctum",
       "Flutter"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/coach-amr/01.webp",
+    "gallery": [
+      "/projects/coach-amr/01.webp",
+      "/projects/coach-amr/02.webp",
+      "/projects/coach-amr/03.webp",
+      "/projects/coach-amr/04.webp"
+    ],
     "video": "",
     "roleEn": "Built the landing page (SPA) and the coach dashboard frontend.",
     "roleAr": "بناء الصفحة التعريفية (SPA) وواجهة لوحة تحكم المدرب."
@@ -825,8 +921,13 @@
       "Express",
       "Socket.IO"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/mafia/01.webp",
+    "gallery": [
+      "/projects/mafia/01.webp",
+      "/projects/mafia/02.webp",
+      "/projects/mafia/03.webp",
+      "/projects/mafia/04.webp"
+    ],
     "video": ""
   },
   {
@@ -863,7 +964,9 @@
     ],
     "mainImg": "",
     "gallery": [],
-    "video": ""
+    "video": "",
+    "roleEn": "Two-person project with Mahmoud Ramzi: built the in-app UI and many of the sections and scenes, and contributed physics functions and rules.",
+    "roleAr": "مشروع لشخصين مع محمود رمزي: بناء واجهة التطبيق والعديد من الأقسام والمشاهد، والمساهمة في دوال وقواعد فيزيائية."
   },
   {
     "id": "medicine-warehouse",
@@ -934,9 +1037,16 @@
       "Vite",
       "dat.GUI"
     ],
-    "mainImg": "",
-    "gallery": [],
-    "video": ""
+    "mainImg": "/projects/submarine/01.webp",
+    "gallery": [
+      "/projects/submarine/01.webp",
+      "/projects/submarine/02.webp",
+      "/projects/submarine/03.webp",
+      "/projects/submarine/04.webp"
+    ],
+    "video": "",
+    "roleEn": "Two-person project with Mahmoud Ramzi, with the work split between the two of us.",
+    "roleAr": "مشروع لشخصين مع محمود رمزي، مع تقسيم العمل بيننا."
   },
   {
     "id": "al-aqsa-3d",
@@ -972,7 +1082,9 @@
     ],
     "mainImg": "",
     "gallery": [],
-    "video": ""
+    "video": "",
+    "roleEn": "Two-person project with Mahmoud Ramzi, with the work split between the two of us.",
+    "roleAr": "مشروع لشخصين مع محمود رمزي، مع تقسيم العمل بيننا."
   },
   {
     "id": "youbot",
@@ -1014,8 +1126,10 @@
       "Emitter / Receiver",
       "Supervisor API"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/youbot/01.webp",
+    "gallery": [
+      "/projects/youbot/01.webp"
+    ],
     "video": "",
     "roleEn": "Chose the robot, added all the required components and sensors, set up the Webots environment, and developed a large part of the control solution.",
     "roleAr": "اختيار الروبوت وإضافة جميع المكونات والحساسات المطلوبة وتجهيز بيئة Webots، وتطوير جزء كبير من حل التحكم."
@@ -1056,7 +1170,9 @@
     ],
     "mainImg": "",
     "gallery": [],
-    "video": ""
+    "video": "",
+    "roleEn": "Two-person project with Mahmoud Ramzi, with the work split between the two of us.",
+    "roleAr": "مشروع لشخصين مع محمود رمزي، مع تقسيم العمل بيننا."
   },
   {
     "id": "parallel-distribution",
@@ -1090,8 +1206,13 @@
       "PVM",
       "MPI.NET"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/parallel-distribution/01.webp",
+    "gallery": [
+      "/projects/parallel-distribution/01.webp",
+      "/projects/parallel-distribution/02.webp",
+      "/projects/parallel-distribution/03.webp",
+      "/projects/parallel-distribution/04.webp"
+    ],
     "video": "",
     "roleEn": "Contributed to both versions: the PVM version on Windows XP (2 cores) and the MPI.NET version on modern Windows (16 cores).",
     "roleAr": "المساهمة في النسختين: نسخة PVM على Windows XP (نواتان) ونسخة MPI.NET على Windows حديث (16 نواة)."
@@ -1130,8 +1251,13 @@
       "Python",
       "heapq"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "/projects/logic-magnets/01.webp",
+    "gallery": [
+      "/projects/logic-magnets/01.webp",
+      "/projects/logic-magnets/02.webp",
+      "/projects/logic-magnets/03.webp",
+      "/projects/logic-magnets/04.webp"
+    ],
     "video": ""
   },
   {
@@ -1163,9 +1289,15 @@
     "tech": [
       "Python"
     ],
-    "mainImg": "",
-    "gallery": [],
-    "video": ""
+    "mainImg": "/projects/ludo-ai/01.webp",
+    "gallery": [
+      "/projects/ludo-ai/01.webp",
+      "/projects/ludo-ai/02.webp",
+      "/projects/ludo-ai/03.webp"
+    ],
+    "video": "",
+    "roleEn": "Two-person project with Mahmoud Ramzi, with the work split between the two of us.",
+    "roleAr": "مشروع لشخصين مع محمود رمزي، مع تقسيم العمل بيننا."
   },
   {
     "id": "lisp-compiler",
@@ -1196,9 +1328,15 @@
       "ANTLR4",
       "Graphviz"
     ],
-    "mainImg": "",
-    "gallery": [],
-    "video": ""
+    "mainImg": "/projects/lisp-compiler/01.webp",
+    "gallery": [
+      "/projects/lisp-compiler/01.webp",
+      "/projects/lisp-compiler/02.webp",
+      "/projects/lisp-compiler/03.webp"
+    ],
+    "video": "",
+    "roleEn": "Two-person project with Mahmoud Ramzi, with the work split between the two of us.",
+    "roleAr": "مشروع لشخصين مع محمود رمزي، مع تقسيم العمل بيننا."
   },
   {
     "id": "blob-wars",
@@ -1229,9 +1367,16 @@
       "Python",
       "Pygame"
     ],
-    "mainImg": "",
-    "gallery": [],
-    "video": ""
+    "mainImg": "/projects/blob-wars/01.webp",
+    "gallery": [
+      "/projects/blob-wars/01.webp",
+      "/projects/blob-wars/02.webp",
+      "/projects/blob-wars/03.webp",
+      "/projects/blob-wars/04.webp"
+    ],
+    "video": "",
+    "roleEn": "Individual work: built this version alone. Mahmoud Ramzi built his own separate version of the same assignment.",
+    "roleAr": "عمل فردي: بناء هذه النسخة بالكامل. وبنى محمود رمزي نسخته المستقلة من التكليف نفسه."
   },
   {
     "id": "spot-the-difference",
@@ -1265,7 +1410,9 @@
     ],
     "mainImg": "",
     "gallery": [],
-    "video": ""
+    "video": "",
+    "roleEn": "Individual work: built this version alone. Mahmoud Ramzi built his own separate version of the same assignment.",
+    "roleAr": "عمل فردي: بناء هذه النسخة بالكامل. وبنى محمود رمزي نسخته المستقلة من التكليف نفسه."
   },
   {
     "id": "touch-wheel",

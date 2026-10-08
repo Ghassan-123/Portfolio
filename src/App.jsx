@@ -118,17 +118,17 @@ export default function App() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-20">
                         <button className="flex items-center gap-3 cursor-pointer group" onClick={() => scrollToSection('home-top')}>
-                            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 p-[2px] group-hover:rotate-6 transition-transform duration-300 shadow-[0_0_20px_rgba(20,184,166,0.25)]">
+                            <div className="shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 p-[2px] group-hover:rotate-6 transition-transform duration-300 shadow-[0_0_20px_rgba(20,184,166,0.25)]">
                                 <div className="w-full h-full rounded-[10px] bg-zinc-950 flex items-center justify-center font-black">
                                     <span className="text-gradient">{profile.initials}</span>
                                 </div>
                             </div>
-                            <span className="hidden sm:block text-lg font-black text-white tracking-tight">
+                            <span className="hidden sm:block text-lg font-black text-white tracking-tight whitespace-nowrap">
                                 {lang === 'ar' ? profile.nameAr : profile.nameEn}
                             </span>
                         </button>
 
-                        <div className="hidden md:flex items-center gap-1">
+                        <div className="hidden lg:flex items-center gap-1">
                             {currentView === 'projects' ? (
                                 <button onClick={() => setCurrentView('home')} className="text-sm font-semibold text-cyan-400 hover:text-teal-300 flex items-center gap-2 cursor-pointer px-3 py-2 group">
                                     {isRTL
@@ -156,7 +156,7 @@ export default function App() {
                             </button>
                             <button
                                 onClick={() => setMenuOpen((o) => !o)}
-                                className="md:hidden p-2 rounded-lg border border-zinc-800 bg-zinc-900 text-gray-300 cursor-pointer"
+                                className="lg:hidden p-2 rounded-lg border border-zinc-800 bg-zinc-900 text-gray-300 cursor-pointer"
                                 aria-label={t.nav.menu}
                                 aria-expanded={menuOpen}
                             >
@@ -167,7 +167,7 @@ export default function App() {
                 </div>
 
                 {/* Mobile menu */}
-                <div className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-500 ease-out ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-500 ease-out ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <div className="px-4 pb-5 pt-1 flex flex-col gap-1 border-t border-zinc-800/80">
                         {currentView === 'projects' && (
                             <button onClick={() => { setCurrentView('home'); setMenuOpen(false); }} className="text-start px-3 py-3 rounded-lg font-bold text-cyan-400 hover:bg-zinc-900 cursor-pointer">
