@@ -1,6 +1,6 @@
 /**
  * Renders a project's demo video from:
- *  - a local file in public/ (e.g. "/videos/matchlens.mp4") → native <video>
+ *  - a local file in public/ (e.g. "videos/matchlens.mp4") → native <video>
  *  - a YouTube link (watch, youtu.be or shorts) → embedded player
  *  - a Vimeo link → embedded player
  *  - a Google Drive file link → embedded preview

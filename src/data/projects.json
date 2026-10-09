@@ -58,7 +58,7 @@
   {
     "id": "adlify",
     "featured": true,
-    "type": "team",
+    "type": "client",
     "year": "2025–2026",
     "titleEn": "ADlify: In-Vehicle Advertising Platform",
     "titleAr": "ADlify: منصة الإعلانات على شاشات المركبات",
@@ -652,7 +652,7 @@
   {
     "id": "alkhani-factory",
     "featured": false,
-    "type": "personal",
+    "type": "client",
     "year": "2026",
     "titleEn": "Alkhani Factory: B2B Manufacturer Website",
     "titleAr": "معمل الخاني: موقع مصنع جوارب",
@@ -672,8 +672,8 @@
       "إرسال الطلبات عبر واتساب والبريد الإلكتروني",
       "فحص التجاوب باستخدام Playwright"
     ],
-    "roleEn": "Solo project: design and development.",
-    "roleAr": "مشروع فردي: التصميم والتطوير.",
+    "roleEn": "Freelance project, done solo: design and development.",
+    "roleAr": "عمل مستقل (Freelance) أنجزته بمفردي: التصميم والتطوير.",
     "tags": [
       "React",
       "Design"
@@ -1397,20 +1397,30 @@
     "year": "",
     "titleEn": "Damascus Coin Mascot",
     "titleAr": "شخصية العملة الدمشقية",
-    "shortDescEn": "A standalone mascot character designed in Figma, holding a 1930s Damascus Syrian coin.",
-    "shortDescAr": "تصميم شخصية (Mascot) مستقل في Figma، تحمل عملة سورية دمشقية من ثلاثينيات القرن الماضي.",
-    "detailedDescEn": "A personal character-design piece made in Figma, not tied to a client or project. The mascot holds a historically accurate 1930s Damascus Syrian coin, blending modern vector illustration with a nod to local history.",
-    "detailedDescAr": "عمل تصميمي شخصي في Figma، غير مرتبط بعميل أو مشروع. تحمل الشخصية تمثيلاً دقيقاً تاريخياً لعملة سورية دمشقية من ثلاثينيات القرن الماضي، مازجةً الرسم المتجهي الحديث بلمسة من التاريخ المحلي.",
-    "highlightsEn": [],
-    "highlightsAr": [],
+    "shortDescEn": "A mascot character designed in Figma, portrayed on a gold coin styled after the 1937 coins of the État de Syrie.",
+    "shortDescAr": "تصميم شخصية (Mascot) في Figma، مرسومة على عملة ذهبية مستوحاة من عملات دولة سورية عام ١٩٣٧.",
+    "detailedDescEn": "A personal character-design piece made in Figma. The mascot, a cheerful bald man with glasses and a moustache, winks and gives a thumbs-up while carrying shopping bags, next to the slogan \"وفّر صح\" (\"save smart\"). He is framed as the portrait on a gold coin styled after the 1937 coins of the État de Syrie, with Arabic and French inscriptions, laurel branches and a beaded rim: a modern vector character with a nod to local history.",
+    "detailedDescAr": "عمل تصميمي شخصي في Figma. الشخصية رجل أصلع مرح بنظارة وشارب، يغمز ويرفع إبهامه حاملاً أكياس التسوق بجانب عبارة «وفّر صح». وتظهر صورته على عملة ذهبية مستوحاة من عملات دولة سورية عام ١٩٣٧، مع نقوش بالعربية والفرنسية وأغصان غار وإطار مزخرف بالخرز، فتجمع بين الرسم المتجهي الحديث ولمسة من التاريخ المحلي.",
+    "highlightsEn": [
+      "Character design: an expression, pose and props that sell the \"save smart\" idea at a glance",
+      "Coin layout modelled on the 1937 État de Syrie coins: bilingual inscriptions, laurels and a beaded rim",
+      "Flat vector illustration in a limited gold palette"
+    ],
+    "highlightsAr": [
+      "تصميم الشخصية: تعبير ووضعية وأدوات توصل فكرة «وفّر صح» من النظرة الأولى",
+      "تخطيط العملة مستوحى من عملات دولة سورية عام ١٩٣٧: نقوش بلغتين وأغصان غار وإطار مزخرف بالخرز",
+      "رسم متجهي مسطح بلوحة ألوان ذهبية محدودة"
+    ],
     "tags": [
       "Design"
     ],
     "tech": [
       "Figma"
     ],
-    "mainImg": "",
-    "gallery": [],
+    "mainImg": "projects/damascus-mascot/01.webp",
+    "gallery": [
+      "projects/damascus-mascot/01.webp"
+    ],
     "video": ""
   }
 ]
